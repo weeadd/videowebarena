@@ -1,0 +1,48 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 11,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Recall the national park in the video. Return the page that shows the distance from the New York to the park.",
+  "instantiation_dict": {},
+  "intent": "Recall the national park in the video. Return the page that shows the distance from the New York to the park.",
+  "intermediate_intent": "What was the national park mentioned in the video?",
+  "video": "get_times",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Acadia National Park"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000/directions?engine=fossgis_osrm_car&route=40.71273%2C-74.00602%3B44.35618%2C-68.23810#map=7/42.814/-71.118",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 9
+}

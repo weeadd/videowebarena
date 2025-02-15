@@ -1,0 +1,45 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 33,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you take me to {description}?",
+  "intent": "Can you take me to the merge request that had the most comments in the video?",
+  "intermediate_intent": "What was the name of the merge request that had the most comments in the video?",
+  "video": "merge_request",
+  "instantiation_dict": {
+    "description": "the merge request that had the most comments in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "How to: Article how to make an accessible nav with dropdowns"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/a11yproject/a11yproject.com/-/merge_requests/1472",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

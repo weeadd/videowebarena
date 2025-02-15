@@ -1,0 +1,46 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 52,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you {description2}?",
+  "intent": "The person in the video mentions their car of a certain model broke down. Can you get the cheapest listing of the same model that appears in the video?",
+  "intermediate_intent": "What was the model of the car that the person in the car says broke down for them?",
+  "video": "search_sort",
+  "instantiation_dict": {
+    "description": "mentions their car of a certain model broke down",
+    "description2": "get the cheapest listing of the same model that appears in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "4Runner |OR| 4runner"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=13412",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 0
+}

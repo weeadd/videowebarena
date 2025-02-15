@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 59,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Make a new post {description}.",
+  "intent": "Make a new post in the same forum as the second post visited in the video, and title the new post as 'My own report'.",
+  "intermediate_intent": "What was the forum of the second post visited in the video?",
+  "video": "reddit_wikipedia_info",
+  "instantiation_dict": {
+    "description": "in the same forum as the second post visited in the video, and title the new post as 'My own report'"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "worldnews"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "func:get_query_text(__page__, \"#main > article > div > div.submission__inner > header\")",
+        "required_contents": {
+          "must_include": [
+            "My own report",
+            "worldnews",
+            "MarvelsGrantMan136"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 9
+}

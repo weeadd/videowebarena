@@ -1,0 +1,67 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 49,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you repost {description}?",
+  "intent": "Can you repost the top post in the first forum to the second forum the user visited in the video??",
+  "intermediate_intent": "What are the names of the first and second forum the person in the video visited?",
+  "video": "subreddit",
+  "instantiation_dict": {
+    "description": "the top post in the first forum to the second forum the user visited in the video?"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "MachineLearning",
+        "arlingtonva"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html",
+      "page_image_query",
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "f/arlingtonva",
+    "url_note": "",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "lambda:(() => { try { return document.querySelector('.submission__link').textContent } catch { return '' } })()",
+        "required_contents": {
+          "exact_match": "[P] I made a command-line tool that explains your errors using ChatGPT (link in comments)"
+        }
+      }
+    ],
+    "page_image_query": [
+      {
+        "eval_image_url": "last",
+        "eval_image_class": ".submission__image",
+        "eval_fuzzy_image_match": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/submission_images/c5baabe3d849e5940bdf4aa2093a81fbb30cef546ca57df3c26b56739e2a5f71.gif"
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 18
+}

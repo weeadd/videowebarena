@@ -1,0 +1,46 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 56,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you {description2}?",
+  "intent": "The person in the video mentions they are getting a new laptop. Can you get the cheapest listing in Computers that is from the same company as the new laptop they say they are getting?",
+  "intermediate_intent": "What was company of the new laptop the person in the video mentions they are getting?",
+  "video": "post_tutorial",
+  "instantiation_dict": {
+    "description": "mentions they are getting a new laptop",
+    "description2": "get the cheapest listing in Computers that is from the same company as the new laptop they say they are getting"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "microsoft"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=76627",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 0
+}

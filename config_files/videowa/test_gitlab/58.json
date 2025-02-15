@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 58,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Create a project {description}.",
+  "instantiation_dict": {
+    "description": "named 'repo_duplicate' using the same template as the person in the video"
+  },
+  "video": "project_tutorial",
+  "intent": "Create a project named 'repo_duplicate' using the same template as the person in the video.",
+  "intermediate_intent": "What template did the person in the video use?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Pages/Plain HTML"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/web_agent_index",
+        "locator": "document.querySelector('.home-panel-description-markdown').outerText",
+        "required_contents": {
+          "must_include": [
+            "Example plain HTML site using GitLab Pages: https://pages.gitlab.io/plain-html |OR| A plain HTML site that uses Netlify for CI/CD instead of GitLab, but still with all the other great GitLab features."
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 15
+}

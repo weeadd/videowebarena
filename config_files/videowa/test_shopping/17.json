@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 17,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my wishlist.",
+  "intent": "Add the snacks with a purple packaging variant that is in the video to my wishlist.",
+  "intermediate_intent": "What is the name of the snack item that has a purple packaging variant?",
+  "video": "search_and_scroll",
+  "instantiation_dict": {
+    "description": "snacks with a purple packaging variant that is in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Barnana Organic Chewy Banana Bites - Variety Pack - 3.5 Ounce, 4 Pack Bites - Healthy Vegetarian Banana Fruit Snacks - Made with Sustainable, Eco Friendly Upcycled Bananas"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/wishlist/?limit=50",
+        "locator": "document.querySelector('.products-grid.wishlist').textContent",
+        "required_contents": {
+          "must_include": [
+            "Barnana Organic Chewy Banana Bites - Variety Pack - 3.5 Ounce, 4 Pack Bites - Healthy Vegetarian Banana Fruit Snacks - Made with Sustainable, Eco Friendly Upcycled Bananas"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

@@ -1,0 +1,3 @@
+2025-02-12 23:30:51,479 - INFO - Create result dir: /Users/kevin/Documents/vwa/videowebarena/results_2-12_v3_with_VideoGUIsummary//test_reddit/-
+2025-02-12 23:30:51,480 - INFO - Dump config to /Users/kevin/Documents/vwa/videowebarena/results_2-12_v3_with_VideoGUIsummary/test_reddit/-/config.json
+2025-02-12 23:31:24,844 - INFO - [Unhandled Error] AssertionError()]

@@ -1,0 +1,46 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 4,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "The person in the video says {description1}. Can you {description2}?",
+  "intent": "The person in the video says 'thank you' at a certain point in the video. Can you take me to the page they were on when they say this?",
+  "intermediate_intent": "What page was the person in the video on when they said 'thank you'?",
+  "video": "explore_star_tutorial",
+  "instantiation_dict": {
+    "description1": "'thank you' at a certain point in the video",
+    "description2": "take me to the page they were on when they say this"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Roshan Jossy |OR| @Roshanjossey"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/Roshanjossey",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 2
+}

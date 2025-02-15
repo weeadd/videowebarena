@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 57,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my cart.",
+  "intent": "Add the last two items where the user visited the item page in the video to my cart.",
+  "intermediate_intent": "What are the names of the last two items where the user visited the item page in the video?",
+  "video": "images_and_description",
+  "instantiation_dict": {
+    "description": "last two items where the user visited the item page in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Food For Life Muffins, Free Brown Rice English, 18 Ounce (Pack of 6)",
+        "All Inklusive Cereal Bars (28 Pack) - Almonds, Cranberries, Strawberries, & Raisins Healthy Cereal Bars w/ ZERO Sugar Added Breakfast Cereal Bars Made w/ Oats, Rice & More - High Fiber Cereal Bars w/ Vitamins & Mineral (24.6 oz) 80 Cal."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Food For Life Muffins, Free Brown Rice English, 18 Ounce (Pack of 6)",
+            "All Inklusive Cereal Bars (28 Pack) - Almonds, Cranberries, Strawberries, & Raisins Healthy Cereal Bars w/ ZERO Sugar Added Breakfast Cereal Bars Made w/ Oats, Rice & More - High Fiber Cereal Bars w/ Vitamins & Mineral (24.6 oz) 80 Cal."
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 0
+}

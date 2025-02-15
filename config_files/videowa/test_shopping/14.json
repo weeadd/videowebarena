@@ -1,0 +1,67 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 14,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/sunset-jade-plant-crassula-easy-to-grow-house-plant-4-pot.html",
+  "geolocation": null,
+  "intent_template": "Can you add {description} to my cart?",
+  "intent": "Can you add enough of this item to come out to more than the first item added in the video to my cart?",
+  "intermediate_intent": "How much did the first item added to cart in the video cost in dollars?",
+  "video": "checkout_and_check_total",
+  "instantiation_dict": {
+    "description": "enough of this item to come out to more than the first item added in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "143.00 |OR| 143"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Sunset Jade Plant - Crassula - Easy to Grow House Plant - 4\" Pot"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart/",
+        "locator": "lambda:(() => {try {return Array.from(document.querySelectorAll('.item-info')).find(el => el.textContent.includes('Sunset Jade Plant - Crassula - Easy to Grow House Plant - 4\" Pot')).querySelector('input').getAttribute('data-item-qty')} catch (e) {return ' '}})()",
+        "required_contents": {
+          "must_include": [
+            "12"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 8
+}

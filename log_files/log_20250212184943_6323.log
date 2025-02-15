@@ -1,0 +1,38 @@
+2025-02-12 18:49:56,514 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpumcy87po/38.json
+2025-02-12 18:49:56,514 - INFO - [Intent]: Can you find the most expensive listing in the video below $10000
+2025-02-12 18:50:10,075 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.<|im_end|>'}
+2025-02-12 18:50:16,987 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '13', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [13]```<|im_end|>'}
+2025-02-12 18:50:24,206 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```'}
+2025-02-12 18:50:29,825 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'up', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [up]```.'}
+2025-02-12 18:50:35,502 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:50:41,310 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'up', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [up]```.'}
+2025-02-12 18:50:47,286 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '2', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [2]```.'}
+2025-02-12 18:50:53,689 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```'}
+2025-02-12 18:51:01,045 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```<|im_end|>'}
+2025-02-12 18:51:08,120 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.<|im_end|>'}
+2025-02-12 18:51:14,007 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:51:21,167 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '2019 Toyota 86 - Sporty Fun, Excellent Condition', 'raw_prediction': 'In summary, the next action I will perform is ```stop [2019 Toyota 86 - Sporty Fun, Excellent Condition]```.'}
+2025-02-12 18:51:21,681 - INFO - [Intermidiate Intent]: What was the most expensive listing in the video below $10000?
+2025-02-12 18:51:21,681 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Navigate to the My Listings page through the My Account button.
+    action: Click the 'My Account' button at the top of the page.
+    action: Navigate to the 'My Listings' page.
+task: Edit an item from your listings.
+    action: Click the 'Edit' button for the desired listing.
+task: Change the category, title, and price of the item.
+    action: Change the category to 'Jewelry'.
+    action: Change the title to 'Sample Title'.
+    action: Change the price to 'New Price for Surges'.
+task: Upload images and change the location details.
+    action: Click the 'Upload Images' button.
+    action: Change the city to 'South Carolina'.
+    action: Change the city to 'Arcadia'.
+task: Update the listing with the new information.
+    action: Click the 'Update' button to save changes to the listing.
+task: Delete an item from your listings if needed.
+    action: Click the 'Delete' button for the sold item.
+    action: Confirm deletion of the item.
+2025-02-12 18:51:21,705 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpumcy87po/38.json
+2025-02-12 18:51:21,705 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpumcy87po/38.json
+2025-02-12 18:51:22,424 - INFO - Average score: 0.0
+2025-02-12 18:51:22,424 - INFO - Average intermediate score: 0.0

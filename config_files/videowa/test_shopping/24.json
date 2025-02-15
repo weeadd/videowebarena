@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 24,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you take me to the search page for {request}?",
+  "intent": "The person in the video states they want protein powder because they play a certain sport. Can you take me to the search page for shoes for that sport, using the search term '{sport mentioned} shoes'?",
+  "intermediate_intent": "What was the sport mentioned by the person in the video?",
+  "video": "add_using_spatial_reasoning",
+  "instantiation_dict": {
+    "description": "states they want protein powder because they play a certain sport",
+    "request": "shoes for that sport, using the search term '{sport mentioned} shoes'"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "basketball"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/catalogsearch/result/?q=basketball+shoes",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 14
+}

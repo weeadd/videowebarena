@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 24,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Disable the {description}.",
+  "intent": "Disable the product that appeared when the person in the video first demonstrated how to filter the table.",
+  "intermediate_intent": "What is the product that appeared when the person in the video first demonstrated how to filter the table be called?",
+  "video": "catalog_tutorial",
+  "instantiation_dict": {
+    "description": "product that appeared when the person in the video first demonstrated how to filter the table"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Iris Workout Top-XS-Red"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/catalog/product/edit/id/1415/",
+        "locator": "document.querySelector('[name=\"product[status]\"').value",
+        "required_contents": {
+          "exact_match": "2"
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 9
+}

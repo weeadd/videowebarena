@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 8,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Recall in the video the states that border the state mentioned in the video. Can you list them in counterclockwise order starting from the east?",
+  "instantiation_dict": {},
+  "intent": "Recall in the video the states that border the state mentioned in the video. Can you list them in counterclockwise order starting from the east?",
+  "intermediate_intent": "What are the 3 bordering states mentioned in the video?",
+  "video": "get_border",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Rhode Island",
+        "New York",
+        "Massachusetts"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "fuzzy_match": [
+        "The order is Rhode Island, Massachusetts, New York"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "easy",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 6
+}

@@ -1,0 +1,55 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 17,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you return {description}?",
+  "intent": "Can you return the links of all the Maryland furniture listings in the video?",
+  "intermediate_intent": "What are the names of all the Maryland furniture listings in the video?",
+  "video": "sort_by_price_range",
+  "instantiation_dict": {
+    "description": "the links of all the Maryland furniture listings in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "sectional couch",
+        "Estate Sale Furniture"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=49211",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=46438"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": ""
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

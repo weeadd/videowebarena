@@ -1,0 +1,51 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 67,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Make a new post {description}.",
+  "intent": "Make a new post in the forum that was visited second in the video.",
+  "intermediate_intent": "What was the second forum in the video?",
+  "video": "new_forum",
+  "instantiation_dict": {
+    "description": "in the forum that was visited second in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "f/llmagents"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "fuzzy_match": "N/A"
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "forum doesn't exist on the base website."
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 9
+}

@@ -1,0 +1,62 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 42,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my cart.",
+  "intent": "Add the items that were present in the comparison page in the video to my cart.",
+  "intermediate_intent": "What were the names of the items in the comparison page in the video?",
+  "video": "add_to_comparison_page",
+  "instantiation_dict": {
+    "description": "items that were present in the comparison page in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "PowerA 1506261-01 Wired Controller for Nintendo Switch - Mario",
+        "YCCTEAM Wireless Pro Controller Compatible with Switch/Switch OLED/Switch Lite and Fire TV, Remote Gamepad with 3D Joystick, Support NFC, Adjustable Dual Vibration & Turbo, Motion Control and Wake Up",
+        "Nintendo Switch Pro Controller Xenoblade 2 Edition (Japan Import)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "PowerA 1506261-01 Wired Controller for Nintendo Switch - Mario",
+            "YCCTEAM Wireless Pro Controller Compatible with Switch/Switch OLED/Switch Lite and Fire TV, Remote Gamepad with 3D Joystick, Support NFC, Adjustable Dual Vibration & Turbo, Motion Control and Wake Up",
+            "Nintendo Switch Pro Controller Xenoblade 2 Edition (Japan Import)"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 0
+}

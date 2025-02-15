@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 7,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Can you traverse {description}?",
+  "intent": "Can you traverse to the review details of the third review from the top when the person in the video first goes to All Reviews from the Marketing tab?",
+  "intermediate_intent": "What was the nickname of the customer for the third review from the top when the person in the video first goes to All Reviews from the Marketing tab?",
+  "video": "find_best_selling",
+  "instantiation_dict": {
+    "description": "to the review details of the third review from the top when the person in the video first goes to All Reviews from the Marketing tab"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "see_review_tutorials"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Emma"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/review/product/edit/id/351/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 3
+}

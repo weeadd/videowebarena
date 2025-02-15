@@ -1,0 +1,40 @@
+2025-02-12 18:40:54,272 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp3lmkvxs7/20.json
+2025-02-12 18:40:54,272 - INFO - [Intent]: Can you return the links of all the listing pages the person in the video went to?
+2025-02-12 18:41:07,364 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '9', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [9]```'}
+2025-02-12 18:41:13,315 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '10', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [10]```.'}
+2025-02-12 18:41:18,698 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```'}
+2025-02-12 18:41:26,429 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '14', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [14]```.'}
+2025-02-12 18:41:32,785 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```'}
+2025-02-12 18:41:38,551 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '10', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [10]```.'}
+2025-02-12 18:41:44,690 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```'}
+2025-02-12 18:41:50,937 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '10', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [10]```<|im_end|>'}
+2025-02-12 18:41:58,871 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```.'}
+2025-02-12 18:42:05,488 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '10', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [10]```<|im_end|>'}
+2025-02-12 18:42:10,942 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```.'}
+2025-02-12 18:42:17,553 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '11', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [11]```'}
+2025-02-12 18:42:23,337 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '12', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [12]```.'}
+2025-02-12 18:42:33,659 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=1162, http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=1163, http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=1164', 'raw_prediction': 'In summary, the next action I will perform is ```stop [http://classifieds.com/index.php?page=item&id=1162, http://classifieds.com/index.php?page=item&id=1163, http://classifieds.com/index.php?page=item&id=1164]```.'}
+2025-02-12 18:42:34,045 - INFO - [Intermidiate Intent]: What are the names of all the listing pages the person in the video went to?
+2025-02-12 18:42:34,045 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Navigate to an item page to search for an item and view all item details.
+    action: Navigate to an item page.
+    action: Search for an item.
+task: Filter listings by location before selecting a category if needed.
+task: Filter posts by a specific location, such as Virginia.
+    action: Filter posts by location, specifically Virginia.
+task: Select a category, such as farm and gardening items, to view relevant posts.
+    action: Select a category from the list.
+    action: Choose 'Farm and Gardening' items.
+task: Sort posts by criteria such as most recent, cheapest, or most expensive.
+    action: Sort the listings by the most recent post.
+    action: Sort the listings by the cheapest post.
+    action: Sort the listings by the most expensive post.
+task: Review post details including the title, poster's name, email, and description.
+    action: View the name and email of the poster.
+    action: Review the description information of the item.
+task: View items without location restrictions by selecting a category directly.
+    action: Go directly to 'Farming Garden' without location restriction.
+2025-02-12 18:42:34,045 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp3lmkvxs7/20.json
+2025-02-12 18:42:34,045 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp3lmkvxs7/20.json
+2025-02-12 18:42:34,754 - INFO - Average score: 0.0
+2025-02-12 18:42:34,754 - INFO - Average intermediate score: 0.0

@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 31,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you assign the merge request {description}?",
+  "intent": "Can you assign the merge request that was below the first one the person in the video clicked to Dave Greene?",
+  "intermediate_intent": "What was the name of the merge request that was below the first one the person in the video clicked?",
+  "video": "merge_request",
+  "instantiation_dict": {
+    "description": "that was below the first one the person in the video clicked to Dave Greene"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "feat: add WCAG levels"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/a11yproject/a11yproject.com/-/merge_requests",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector('.block.reviewer').outerText",
+        "required_contents": {
+          "must_include": [
+            "Agustina Chaer"
+          ]
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 9
+}

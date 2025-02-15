@@ -1,0 +1,52 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 34,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you find {description}?",
+  "intent": "Can you find the listing in the video that was deleted (it should still exist on your site) and change its price to 10 dollars?",
+  "intermediate_intent": "What was the listing in the video that was deleted (it should still exist on your site)?",
+  "video": "edit_listings",
+  "instantiation_dict": {
+    "description": "the listing in the video that was deleted (it should still exist on your site) and change its price to 10 dollars"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Compact Canister Vacuum Cleaner - Lightweight and Powerful"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=/index.php?page=item&id=84154",
+        "locator": "func:get_query_text(__page__, '.price')",
+        "required_contents": {
+          "must_include": [
+            "10.00"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

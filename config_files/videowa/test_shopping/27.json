@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 27,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Can you return the preview image urls of {description}.",
+  "intent": "Can you return the preview image urls of all the items the person in the video added to their cart.",
+  "intermediate_intent": "What were the names of the items the person in the video added to their cart?",
+  "video": "sort_by_price",
+  "instantiation_dict": {
+    "description": "all the items the person in the video added to their cart"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Sony Computer Entertainment VR - Worlds Bundle - PlayStation 4",
+        "Dechoga PS4 Charging Board, Replacement USB Charging Port Socket Board for Sony Playstation 4 PS4 Game Controller",
+        "JTJxop Wood Platform Bed with Headboard, Solid Wood Platform Bed, Vintage Sturdy Full Size Wood Bed Frame, with Wood Slat Support, No Box Spring Needed, for Adults and Kids,180x200cm",
+        "Floor Adjustable Microwave Oven Rack: 3-Layer Kitchen Storage Frame| Household Panel Shelf| Multifunctional Standing Baker's Rack| Spice Organizer"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/40f473354257c5370e4a8aeb61c91822/B/0/B09LCDGBDY.0.jpg",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/40f473354257c5370e4a8aeb61c91822/B/0/B08R5SWKX4.0.jpg",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/40f473354257c5370e4a8aeb61c91822/B/0/B09RVQKN65.0.jpg",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/40f473354257c5370e4a8aeb61c91822/B/0/B01N36E1XT.0.jpg"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 17
+}

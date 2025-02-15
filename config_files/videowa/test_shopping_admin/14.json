@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 14,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Send a message to {description}.",
+  "intent": "Send a message to [blank] for her most recent processing order: \"Sorry we are out of stock, please reorder\". [blank] refers to the second customer from the top after the last filter made in the video.",
+  "intermediate_intent": "Who was the second customer from the top after the last filter made in the video?",
+  "video": "sales_tutorial",
+  "instantiation_dict": {
+    "description": "[blank] for her most recent processing order: \"Sorry we are out of stock, please reorder\". [blank] refers to the second customer from the top after the last filter made in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Grace Nguyen"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/sales/order/view/order_id/300/",
+        "locator": "document.querySelector(\"#order_history_block\").querySelector(\".note-list\").firstElementChild.querySelector(\".note-list-comment\").outerText",
+        "required_contents": {
+          "exact_match": "Sorry we are out of stock, please reorder"
+        }
+      }
+    ]
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 6
+}

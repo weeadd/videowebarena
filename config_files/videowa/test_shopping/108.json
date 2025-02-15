@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 108,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Take me to the {description}?",
+  "intent": "Take me to the listing of the cheapest visible item in the first category in the video?",
+  "intermediate_intent": "What was the name of the cheapest visible item in the first category in the video?",
+  "video": "price_range_url",
+  "instantiation_dict": {
+    "description": "listing of the cheapest visible item in the first category in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Pharmacist Gift for Women Appreciation Gifts Travel Makeup Mirror Pharmacy Tech Gift for Nurse Doctor Nursing Gift Medical School Birthday Graduation Gift Compact Makeup Mirror for Friend Coworker"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/pharmacist-gift-for-women-appreciation-gifts-travel-makeup-mirror-pharmacy-tech-gift-for-nurse-doctor-nursing-gift-medical-school-birthday-graduation-gift-compact-makeup-mirror-for-friend-coworker.html",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 25
+}

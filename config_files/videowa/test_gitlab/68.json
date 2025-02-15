@@ -1,0 +1,74 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 68,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Create a project {description}.",
+  "instantiation_dict": {
+    "description": "that includes the city searched on Wikipedia in README file, and with the same name as the one made in the video and an MIT License"
+  },
+  "video": "project_wikipediareddit_tutorial",
+  "intent": "Create a project that includes the city searched on Wikipedia in README file, and with the same name as the one made in the video and an MIT License.",
+  "intermediate_intent": "What was the name of the repo made in the video and the city searched on Wikipedia?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "list_of_awesome_things",
+        "Boston"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/list_of_awesome_things/-/commits",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Initial commit"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/list_of_awesome_things/-/blob/main/LICENSE",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "MIT license",
+            "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/list_of_awesome_things/-/raw/main/README.md",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Boston"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 15
+}

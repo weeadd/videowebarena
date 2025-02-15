@@ -1,0 +1,35 @@
+2025-02-12 17:14:53,454 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_a9h3wrg/3.json
+2025-02-12 17:14:53,455 - INFO - [Intent]: Is going from the hotel mentioned in the video to Carnegie Mellon University faster or to University of Pittsburgh faster?
+2025-02-12 17:15:07,301 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'ERROR: GPT-4V models do not support mode completion', 'raw_prediction': ''}
+2025-02-12 17:15:07,510 - INFO - [Intermidiate Intent]: What was the hotel mentioned in the video?
+2025-02-12 17:15:07,510 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Introduce the tutorial on using OpenStreetMap for navigation.
+    action: Open OpenStreetMap.
+task: Set a navigation goal from Pittsburgh to Boston.
+    action: Enter 'Pittsburgh' as the starting location.
+    action: Enter 'Boston' as the destination.
+    action: Select 'Drive' as the mode of transportation.
+task: Change the destination to New York and observe the updated travel time and distance.
+    action: Change destination to 'New York'.
+task: Set a new route from the University of Missouri to Carnegie Mellon University and check the travel details.
+    action: Enter 'University of Missouri' as the starting location.
+    action: Enter 'Carnegie Mellon University' as the destination.
+    action: Scroll down to view the autofilled address.
+task: Change the mode of transportation to walking from Carnegie Mellon University to Shandley Park and observe the travel details.
+    action: Change destination to 'Shandley Park'.
+    action: Change mode of transportation to 'Foot'.
+task: Plan a drive from a hotel in Pittsburgh to Carnegie Mellon University and check the travel time and distance.
+    action: Enter 'Hilton Garden Inn, Pittsburgh' as the starting location.
+    action: Enter 'Carnegie Mellon University' as the destination.
+task: Plan a drive from the hotel to Hockenshire Stadium and observe the travel details.
+    action: Enter 'Hilton Garden Inn, Pittsburgh' as the starting location.
+    action: Change destination to 'Hockenshire Stadium'.
+task: Set a route from Carnegie Mellon University to MIT and review the route, time, and distance.
+    action: Change destination to 'MIT'.
+task: Plan a trip from Boston to Acadia National Park, first by driving and then by biking, and compare the travel times and distances.
+    action: Enter 'Boston' as the starting location and 'Acadia National Park' as the destination.
+    action: Change mode of transportation to 'Bike'.
+2025-02-12 17:15:07,511 - INFO - [Intermediate Result] (PASS) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_a9h3wrg/3.json
+2025-02-12 17:15:07,511 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_a9h3wrg/3.json
+2025-02-12 17:15:07,575 - INFO - Average score: 0.0
+2025-02-12 17:15:07,575 - INFO - Average intermediate score: 1.0

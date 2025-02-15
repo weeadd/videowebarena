@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 25,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "{condition}. Add {description} to wishlist.",
+  "intent": "In the first category opened by the person in the video, there is a item on the page that has a grey background. Add the item with the grey background in its image to wishlist.",
+  "intermediate_intent": "What was the name of the item with the grey background in the video?",
+  "video": "add_using_spatial_reasoning",
+  "instantiation_dict": {
+    "condition": "In the first category opened by the person in the video, there is a item on the page that has a grey background",
+    "description": "the item with the grey background in its image"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Pomegranate Seltzer by Polar Beverages 1 liter (33.8 fl oz) Bottles (4 Bottles)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/wishlist/?limit=50",
+        "locator": "document.querySelector('.products-grid.wishlist').textContent",
+        "required_contents": {
+          "must_include": [
+            "Pomegranate Seltzer by Polar Beverages 1 liter (33.8 fl oz) Bottles (4 Bottles)"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 15
+}

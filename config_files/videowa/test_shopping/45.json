@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 45,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you add {description2} to my cart?",
+  "intent": "The person in the video mentions that they use headphones to play a certain game. Can you add the most expensive item with the theme of that game to my cart?",
+  "intermediate_intent": "What was game the person in the video mentions they play using the headphones?",
+  "video": "review_tutorial",
+  "instantiation_dict": {
+    "description": "mentions that they use headphones to play a certain game",
+    "description2": "the most expensive item with the theme of that game"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "fortnite"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Nintendo Joy-Con (L)/(R) Fortnite Fleet Force Bundle - Nintendo Switch"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

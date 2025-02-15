@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 58,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Can you return the image link of {description}?",
+  "intent": "Can you return the image link of the breakfast food in the video that showed food outside the package in its image?",
+  "intermediate_intent": "What was the breakfast food item in the video whose image showed food outside the package in its image?",
+  "video": "images_and_description",
+  "instantiation_dict": {
+    "description": "last two items where the user visited the item page in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Carioni Food & Health Snack Bar with Puffed Rice, Cocoa and Agave Syrup, 25 Grams (Pack of 30 Pieces)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Carioni Food & Health Snack Bar with Puffed Rice, Cocoa and Agave Syrup, 25 Grams (Pack of 30 Pieces)"
+      ]
+    },
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/829a59e57f886f8cf0598ffca4f8a940/B/0/B087T7TDRR.0.jpg",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 21
+}

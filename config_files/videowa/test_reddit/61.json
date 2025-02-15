@@ -1,0 +1,67 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 61,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you make a new forum {description}.",
+  "intent": "Can you make a new forum identical to the first one in the video.",
+  "intermediate_intent": "What was the name of the first forum in the video?",
+  "video": "new_forum",
+  "instantiation_dict": {
+    "description": "identical to the first one in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "f/carnegiemellon"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/carnegiemellon",
+        "locator": "document.querySelector(\"#forum_description\").value",
+        "required_contents": {
+          "must_include": [
+            "A Forum For Carnegie Mellon University"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/carnegiemellon",
+        "locator": "document.querySelector(\"#forum_sidebar\").value",
+        "required_contents": {
+          "must_include": [
+            "Go Tartans!"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 20
+}

@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 30,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Take me to the {description}.?",
+  "intent": "Take me to the customer page of the customer who shares a name with the most recent customer who left a review of the same status as the one first filtered for in the video (choose the customer with the alphabetically first last name if multiple).?",
+  "intermediate_intent": "What is the name of the customer who shares a name with the most recent customer who left a review (choose the customer with the alphabetically first last name if multiple)?",
+  "video": "info_search_customer_tutorial",
+  "instantiation_dict": {
+    "description": "customer page of the customer who shares a name with the most recent customer who left a review of the same status as the one first filtered for in the video (choose the customer with the alphabetically first last name if multiple)"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Emma Davis"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/customer/index/edit/id/24/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 13
+}

@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 41,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Delete the {description}.",
+  "intent": "Delete the review (with the same status as the one filtered for in the video) with title \"won't recommend\" on the Olivia Jacket.",
+  "intermediate_intent": "What is the ID of the review (with the same status as the one filtered for in the video) with title \"won't recommend\" on the Olivia Jacket?",
+  "video": "marketing_tutorial",
+  "instantiation_dict": {
+    "description": "review (with the same status as the one filtered for in the video) with title \"won't recommend\" on the Olivia Jacket"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "351"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "",
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/review/product/edit/id/351",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Rating isn't Available"
+          ]
+        }
+      }
+    ]
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 17
+}

@@ -1,0 +1,4 @@
+2025-02-12 21:50:51,528 - INFO - Dump config to /Users/kevin/Documents/vwa/videowebarena/results_2-12_v3_with_VideoGUIsummary/test_map/-/config.json
+2025-02-12 21:50:57,896 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpur91_qhf/1.json
+2025-02-12 21:50:57,896 - INFO - [Intent]: In the video, there were 3 states that were mentioned to be bordering the focused state, which state's capital city is closest to Pittsburgh?
+2025-02-12 21:51:28,999 - INFO - [Unhandled Error] TimeoutError('Timeout 30000ms exceeded.\n=========================== logs ===========================\nnavigating to "http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:3000/", waiting until "load"\n============================================================')]

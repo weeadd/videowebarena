@@ -1,0 +1,64 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 20,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add {description} to my cart.",
+  "intent": "Add all the items that were added to cart in the video to my cart.",
+  "intermediate_intent": "What are the product names of all the items added to cart in the video?",
+  "video": "add_ingredients_to_cart",
+  "instantiation_dict": {
+    "description": "all the items that were added to cart in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Nature's Own Perfectly Crafted Brioche Style Hamburger Buns, 18 Oz",
+        "100% Grass Fed Beef Burgers - 1/2 lb Each - Package Of 12 - Delicious & Healthy Burger Patty, Protein & Omega-3 Rich Gourmet Hamburger Meat, Juicy & Ready To Cook, Classic American BBQ Choice",
+        "CLEARFIELD SLICED AMERICAN CHEESE. WHITE. 3 LB. 72 SLICES.",
+        "Heinz Tomato Ketchup with No Sugar Added (6 ct Pack, 13 oz Bottles)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Nature's Own Perfectly Crafted Brioche Style Hamburger Buns, 18 Oz",
+            "100% Grass Fed Beef Burgers - 1/2 lb Each - Package Of 12 - Delicious & Healthy Burger Patty, Protein & Omega-3 Rich Gourmet Hamburger Meat, Juicy & Ready To Cook, Classic American BBQ Choice",
+            "CLEARFIELD SLICED AMERICAN CHEESE. WHITE. 3 LB. 72 SLICES.",
+            "Heinz Tomato Ketchup with No Sugar Added (6 ct Pack, 13 oz Bottles)"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 11
+}

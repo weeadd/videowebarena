@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 10,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Take me to {description}.",
+  "intent": "Take me to the exact page when the person in the video says they sorted the comments by time..",
+  "intermediate_intent": "What was the name of the post the person in the video is on when they said they sorted the comments by time.",
+  "video": "time_and_comment",
+  "instantiation_dict": {
+    "description": "the exact page when the person in the video says they sorted the comments by time."
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "my cereal :D"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/f/MechanicalKeyboards/100086/my-cereal-d/linear",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

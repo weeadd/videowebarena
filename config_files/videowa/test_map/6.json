@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 6,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "The video mentioned a starting point to figure out the optimal route between 3 locations. What is the optimal route if we instead start from {location}?",
+  "instantiation_dict": {
+    "location": "Point State Park"
+  },
+  "intent": "The video mentioned a starting point to figure out the optimal route between 3 locations. What is the optimal route if we instead start from Point State Park?",
+  "intermediate_intent": "What were the 3 locations mentioned in the video?",
+  "video": "multistop_total_time",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Schenley Park",
+        "Carnegie Mellon University",
+        "Schenley Park"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "fuzzy_match": [
+        "The order is Point State Park, Carnegie Mellon University, Schenley Park"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

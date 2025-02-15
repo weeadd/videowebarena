@@ -1,0 +1,78 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 2,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you upvote all the posts {description}?.",
+  "intent": "Can you upvote all the posts in the video with sunsets in their image?.",
+  "intermediate_intent": "What are the names of the posts in the video with sunsets in their image?",
+  "video": "go_to_comments",
+  "instantiation_dict": {
+    "description": "in the video with sunsets in their image"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "As an Oregonian, I'm biased\u2026but DAMN Seattle was gorgeous last night.",
+        "Seattle, WA December/2022",
+        "Eatonville view"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/Washington/37077/eatonville-view",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/Washington/58165/seattle-wa-december-2022",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/Washington/122910/as-an-oregonian-i-m-biased-but-damn-seattle-was-gorgeous",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 2
+}

@@ -1,0 +1,74 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 44,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Generate the {description}?",
+  "intent": "Generate the same order report as the first one in the video with period as years.?",
+  "intermediate_intent": "What is the start and end date of the first order report in the video (in MM/DD/YY)?",
+  "video": "report_tutorial",
+  "instantiation_dict": {
+    "description": "same order report as the first one in the video with period as years."
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "01/01/21 |OR| 1/1/21",
+        "09/30/23 |OR| 9/30/23"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "",
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/reports/report_sales/sales",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_period_type\"').value",
+        "required_contents": {
+          "exact_match": "Year"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_from\"').value",
+        "required_contents": {
+          "exact_match": "1/1/21"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_to\"').value",
+        "required_contents": {
+          "exact_match": "9/30/23"
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 18
+}

@@ -1,0 +1,99 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 75,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "For {description}, can you {description2}?",
+  "intent": "For all the posts voted in the video, can you downvote all the upvoted posts and upvote all the downvoted posts?",
+  "intermediate_intent": "What are the names of all the voted posts in the video?",
+  "video": "vote_all_poster",
+  "instantiation_dict": {
+    "description": "all the posts voted in the video",
+    "description2": "downvote all the upvoted posts and upvote all the downvoted posts"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "[R] APPLE research: GAUDI \u2014 a neural architect for immersive 3D scene generation",
+        "[R] QUALCOMM demos 3D reconstruction on AR glasses \u2014 monocular depth estimation with self supervised neural network processed on glasses and smartphone in realtime",
+        "[N] new SNAPCHAT feature transfers an image of an upper body garment in realtime on a person in AR",
+        "[R] APPLE research: GAUDI \u2014 a neural architect for immersive 3D scene generation",
+        "4 Trillion dollar corrective response"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/wallstreetbets/136192/4-trillion-dollar-corrective-response",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/MachineLearning/77983/r-meta-presents-mav3d-text-to-3d-video",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/MachineLearning/34862/r-qualcomm-demos-3d-reconstruction-on-ar-glasses-monocular",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/MachineLearning/34825/n-new-snapchat-feature-transfers-an-image-of-an-upper-body",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/MachineLearning/34760/r-apple-research-gaudi-a-neural-architect-for-immersive-3d",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 22
+}

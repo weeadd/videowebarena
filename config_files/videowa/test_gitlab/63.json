@@ -1,0 +1,84 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 63,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Create a project {description}.",
+  "instantiation_dict": {
+    "description": "named 'third_duplicate' which is the same in content as the first repository made in the video, but add an MIT License"
+  },
+  "video": "project_tutorial",
+  "intent": "Create a project named 'third_duplicate' which is the same in content as the first repository made in the video, but add an MIT License.",
+  "intermediate_intent": "What was the name of the first repo made in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "test_repo_1"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/third_duplicate",
+        "locator": "document.querySelector('.visibility-icon').getAttribute('title')",
+        "required_contents": {
+          "must_include": [
+            "Private"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/third_duplicate/-/commits",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Initial commit"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/third_duplicate/-/project_members",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "@joecam1673",
+            "@jclee",
+            "@jodoglevy"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/third_duplicate/-/blob/main/LICENSE",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "MIT license",
+            "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 15
+}

@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 59,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Leave a review on {description}.",
+  "intent": "Leave a review on the more expensive item that was removed from the cart in the video, giving 1 star and saying 'this was over my budget of (budget_amount)' where budget amount is the budget stated by the person in the video.",
+  "intermediate_intent": "What was the most expensive item that was removed from the cart in the video, and what was the budget that was stated in the video?",
+  "video": "remove_from_cart",
+  "instantiation_dict": {
+    "description": "the more expensive item that was removed from the cart in the video, giving 1 star and saying 'this was over my budget of (budget_amount)' where budget amount is the budget stated by the person in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "20",
+        "The Amazing Spider-Man 2 (Spiderman) Sony Playstation 4 PS4 Game"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+        "locator": "func:shopping_get_sku_latest_review_text(\"B00I5D2QVA\")",
+        "required_contents": {
+          "must_include": [
+            "this was over my budget of",
+            "20"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 4
+}

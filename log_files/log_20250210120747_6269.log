@@ -1,0 +1,5 @@
+2025-02-10 12:07:47,371 - INFO - Create result dir: results
+2025-02-10 12:07:47,371 - INFO - File config_files/videowa/test_classifieds/63.json does not exist
+2025-02-10 12:07:47,371 - INFO - File config_files/videowa/test_classifieds/67.json does not exist
+2025-02-10 12:07:47,371 - INFO - Dump config to results/config.json
+2025-02-10 12:07:57,683 - INFO - [Unhandled Error] AssertionError()]

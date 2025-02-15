@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 33,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you comment {description}?",
+  "intent": "Can you comment 'Spidey!!' on all the listings in the video with Spiderman in the image?",
+  "intermediate_intent": "What are the name(s) of all the listings in the video with Spiderman in the image?",
+  "video": "spatial_tutorial",
+  "instantiation_dict": {
+    "description": "'Spidey!!' on all the listings in the video with Spiderman in the image?"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Storytime Collection Books"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=53620",
+        "locator": "func:get_query_text(__page__, '.comments_list')",
+        "required_contents": {
+          "must_include": [
+            "Spidey!!"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 7
+}

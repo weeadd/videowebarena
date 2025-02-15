@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 53,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Buy {description}.",
+  "intent": "Buy all the shoes that the person in the video clicked on.",
+  "intermediate_intent": "What are the names of all the shoes that the person clicked on in the video?",
+  "video": "buy_shoes",
+  "instantiation_dict": {
+    "description": "all the shoes that the person in the video clicked on"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Men's High Performance High-Top Basketball Shoes Women's Shock Absorption Breathable Basketball Sneakers",
+        "Nike Men's Lebron Witness IV Basketball Shoes"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "func:shopping_get_latest_order_url()",
+        "locator": "func:get_query_text(__page__, \".order-details-items.ordered\")",
+        "required_contents": {
+          "must_include": [
+            "B07TKMM16B",
+            "B08JVL96FK"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 12
+}

@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 0,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you {description2}?",
+  "intent": "The person in the video says they are from a certain university. Can you tell me the email of the poster of the cheapest bike from the city the university is based in?",
+  "intermediate_intent": "What university did the person in the video say they attend?",
+  "video": "search_sort_comment",
+  "instantiation_dict": {
+    "description": "says they are from a certain university",
+    "description2": "tell me the email of the poster of the cheapest bike from the city the university is based in"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Carnegie Mellon"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "sophia.ahmed351@example.com"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": ""
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 0
+}

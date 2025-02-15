@@ -1,0 +1,644 @@
+{
+  "text_observation": "[1] [IMG] [Magento Admin Panel]\n[] [StaticText] [Dashboard]\n[2] [A] [Dashboard]\n[] [StaticText] [SalesSalesOperationsOrdersInvoicesShipmentsCredit MemosBilling AgreementsTransactionsBraintree Virtual Terminal]\n[3] [A] [Sales]\n[4] [A] []\n[] [StaticText] [OperationsOrdersInvoicesShipmentsCredit MemosBilling AgreementsTransactionsBraintree Virtual Terminal]\n[] [StaticText] [Orders]\n[5] [A] [Orders]\n[] [StaticText] [Invoices]\n[6] [A] [Invoices]\n[] [StaticText] [Shipments]\n[7] [A] [Shipments]\n[] [StaticText] [Credit Memos]\n[8] [A] [Credit Memos]\n[] [StaticText] [Billing Agreements]\n[9] [A] [Billing Agreements]\n[] [StaticText] [Transactions]\n[10] [A] [Transactions]\n[] [StaticText] [Braintree Virtual Terminal]\n[11] [A] [Braintree Virtual Terminal]\n[] [StaticText] [CatalogCatalogInventoryProductsCategories]\n[12] [A] [Catalog]\n[13] [A] []\n[] [StaticText] [InventoryProductsCategories]\n[] [StaticText] [Products]\n[14] [A] [Products]\n[] [StaticText] [Categories]\n[15] [A] [Categories]\n[] [StaticText] [CustomersCustomersAll CustomersNow OnlineLogin as Customer LogCustomer Groups]\n[16] [A] [Customers]\n[17] [A] []\n[] [StaticText] [All Customers]\n[18] [A] [All Customers]\n[] [StaticText] [Now Online]\n[19] [A] [Now Online]\n[] [StaticText] [Login as Customer Log]\n[20] [A] [Login as Customer Log]\n[] [StaticText] [Customer Groups]\n[21] [A] [Customer Groups]\n[] [StaticText] [MarketingMarketingPromotionsCatalog Price RuleCart Price RulesCommunicationsEmail TemplatesNewsletter TemplatesNewsletter QueueNewsletter SubscribersSEO & SearchURL RewritesSearch TermsSearch Synonyms]\n[22] [A] [Marketing]\n[23] [A] []\n[] [StaticText] [SEO & SearchURL RewritesSearch TermsSearch SynonymsSite MapUser ContentAll ReviewsPending Reviews]\n[] [StaticText] [SEO & SearchURL RewritesSearch TermsSearch SynonymsSite Map]\n[] [StaticText] [URL Rewrites]\n[24] [A] [URL Rewrites]\n[] [StaticText] [Search Terms]\n[25] [A] [Search Terms]\n[] [StaticText] [Search Synonyms]\n[26] [A] [Search Synonyms]\n[] [StaticText] [Site Map]\n[27] [A] [Site Map]\n[] [StaticText] [User ContentAll ReviewsPending Reviews]\n[] [StaticText] [All Reviews]\n[28] [A] [All Reviews]\n[] [StaticText] [Pending Reviews]\n[29] [A] [Pending Reviews]\n[] [StaticText] [ContentContentElementsPagesBlocksWidgetsTemplatesMediaMedia GalleryDesignConfigurationThemesSchedule]\n[30] [A] [Content]\n[31] [A] []\n[] [StaticText] [ElementsPagesBlocksWidgetsTemplates]\n[] [StaticText] [Pages]\n[32] [A] [Pages]\n[] [StaticText] [Blocks]\n[33] [A] [Blocks]\n[] [StaticText] [Widgets]\n[34] [A] [Widgets]\n[] [StaticText] [Templates]\n[35] [A] [Templates]\n[] [StaticText] [MediaMedia Gallery]\n[] [StaticText] [Media Gallery]\n[36] [A] [Media Gallery]\n[] [StaticText] [DesignConfigurationThemesSchedule]\n[] [StaticText] [Configuration]\n[37] [A] [Configuration]\n[] [StaticText] [Themes]\n[38] [A] [Themes]\n[] [StaticText] [Schedule]\n[39] [A] [Schedule]\n[] [StaticText] [ReportsReportsMarketingProducts in CartSearch TermsAbandoned CartsNewsletter Problem ReportsReviewsBy CustomersBy ProductsSalesOrdersTaxInvoicedShippingRefundsCouponsPayPal SettlementBraintree Settlem]\n[40] [A] [Reports]\n[41] [A] []\n[] [StaticText] [MarketingProducts in CartSearch TermsAbandoned CartsNewsletter Problem ReportsReviewsBy CustomersBy Products]\n[] [StaticText] [MarketingProducts in CartSearch TermsAbandoned CartsNewsletter Problem Reports]\n[] [StaticText] [Products in Cart]\n[42] [A] [Products in Cart]\n[43] [A] [Search Terms]\n[] [StaticText] [Abandoned Carts]\n[44] [A] [Abandoned Carts]\n[] [StaticText] [Newsletter Problem Reports]\n[45] [A] [Newsletter Problem Reports]\n[] [StaticText] [ReviewsBy CustomersBy Products]\n[] [StaticText] [Reviews]\n[] [StaticText] [By Customers]\n[46] [A] [By Customers]\n[] [StaticText] [By Products]\n[47] [A] [By Products]\n[] [StaticText] [SalesOrdersTaxInvoicedShippingRefundsCouponsPayPal SettlementBraintree Settlement]\n[48] [A] [Orders]\n[] [StaticText] [Tax]\n[49] [A] [Tax]\n[] [StaticText] [Invoiced]\n[50] [A] [Invoiced]\n[] [StaticText] [Shipping]\n[51] [A] [Shipping]\n[] [StaticText] [Refunds]\n[52] [A] [Refunds]\n[] [StaticText] [Coupons]\n[53] [A] [Coupons]\n[] [StaticText] [PayPal Settlement]\n[54] [A] [PayPal Settlement]\n[] [StaticText] [Braintree Settlement]\n[55] [A] [Braintree Settlement]\n[] [StaticText] [CustomersOrder TotalOrder CountNewProductsViewsBestsellersLow StockOrderedDownloadsStatisticsRefresh Statistics]\n[] [StaticText] [CustomersOrder TotalOrder CountNew]\n[] [StaticText] [Order Total]\n[56] [A] [Order Total]\n[] [StaticText] [Order Count]\n[57] [A] [Order Count]\n[] [StaticText] [New]\n[58] [A] [New]\n[] [StaticText] [ProductsViewsBestsellersLow StockOrderedDownloads]\n[] [StaticText] [Views]\n[59] [A] [Views]\n[] [StaticText] [Bestsellers]\n[60] [A] [Bestsellers]\n[] [StaticText] [Low Stock]\n[61] [A] [Low Stock]\n[] [StaticText] [Ordered]\n[62] [A] [Ordered]\n[] [StaticText] [Downloads]\n[63] [A] [Downloads]\n[] [StaticText] [StatisticsRefresh Statistics]\n[] [StaticText] [Statistics]\n[] [StaticText] [Refresh Statistics]\n[64] [A] [Refresh Statistics]\n[] [StaticText] [Business IntelligenceAdvanced ReportingBI Essentials]\n[] [StaticText] [Business Intelligence]\n[] [StaticText] [Advanced Reporting]\n[65] [A] [Advanced Reporting]\n[] [StaticText] [BI Essentials]\n[66] [A] [BI Essentials]\n[] [StaticText] [StoresStoresSettingsAll StoresConfigurationTerms and ConditionsOrder StatusInventorySourcesStocksTaxesTax RulesTax Zones and RatesCurrencyCurrency RatesCurrency SymbolsAttributesProductAttribute SetRa]\n[67] [A] [Stores]\n[68] [A] []\n[] [StaticText] [CurrencyCurrency RatesCurrency SymbolsAttributesProductAttribute SetRating]\n[] [StaticText] [CurrencyCurrency RatesCurrency Symbols]\n[] [StaticText] [Currency Rates]\n[69] [A] [Currency Rates]\n[] [StaticText] [Currency Symbols]\n[70] [A] [Currency Symbols]\n[] [StaticText] [AttributesProductAttribute SetRating]\n[] [StaticText] [Product]\n[71] [A] [Product]\n[] [StaticText] [Attribute Set]\n[72] [A] [Attribute Set]\n[] [StaticText] [Rating]\n[73] [A] [Rating]\n[] [StaticText] [SystemSystemData TransferImportExportImport/Export Tax RatesImport HistoryExtensionsIntegrationsToolsCache ManagementIndex ManagementPermissionsAll UsersLocked UsersUser RolesAction LogsBulk ActionsOt]\n[74] [A] [System]\n[75] [A] []\n[] [StaticText] [PermissionsAll UsersLocked UsersUser RolesAction LogsBulk ActionsOther SettingsNotificationsCustom VariablesManage Encryption Key]\n[] [StaticText] [PermissionsAll UsersLocked UsersUser Roles]\n[] [StaticText] [All Users]\n[76] [A] [All Users]\n[] [StaticText] [Locked Users]\n[77] [A] [Locked Users]\n[] [StaticText] [User Roles]\n[78] [A] [User Roles]\n[] [StaticText] [Action LogsBulk Actions]\n[] [StaticText] [Bulk Actions]\n[79] [A] [Bulk Actions]\n[] [StaticText] [Other SettingsNotificationsCustom VariablesManage Encryption Key]\n[] [StaticText] [Notifications]\n[80] [A] [Notifications]\n[] [StaticText] [Custom Variables]\n[81] [A] [Custom Variables]\n[] [StaticText] [Manage Encryption Key]\n[82] [A] [Manage Encryption Key]\n[] [StaticText] [Find Partners & Extensions]\n[83] [A] [Find Partners & Extensions]\n[84] [BUTTON] [System Messages:                    1]\n[] [StaticText] [System Messages]\n[85] [A] [Retry Synchronization]\n[86] [A] [admin]\n[87] [A] []\n[88] [INPUT] []\n[] [StaticText] [Scope:]\n[89] [BUTTON] [All Store Views]\n[90] [A] [What is this?]\n[91] [BUTTON] [Reload Data]\n[] [StaticText] [Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.]\n[92] [A] [Go to Advanced Reporting]\n[93] [A] [here]\n[] [StaticText] [Revenue                                            $0.00]\n[] [StaticText] [Revenue]\n[] [StaticText] [$0.00]\n[] [StaticText] [Tax                                            $0.00]\n[] [StaticText] [Shipping                                            $0.00]\n[] [StaticText] [Quantity                                            0]\n[] [StaticText] [Quantity]\n[94] [LI] [Bestsellers                                        var elemPYbtphbcArray = document.querySelectorAll('#grid_tab_ordered_products_content');    if(elemPYbtphbcArray.length !== 'undefined'){        elem]\n[95] [A] [Bestsellers]\n[96] [LI] [Most Viewed Products                                                            var elemOQAz9r20Array = document.querySelectorAll('#grid_tab_reviewed_products_content');    if(elemOQAz9r20Array.length]\n[97] [A] [Most Viewed Products]\n[98] [LI] [New Customers                                                            var elemeM93CAtMArray = document.querySelectorAll('#grid_tab_new_customers_content');    if(elemeM93CAtMArray.length !== 'undef]\n[99] [A] [New Customers]\n[100] [LI] [Customers                                                            var elem7EOvEHgcArray = document.querySelectorAll('#grid_tab_customers_content');    if(elem7EOvEHgcArray.length !== 'undefined'){ ]\n[101] [A] [Customers]\n[] [StaticText] [Price]\n[] [StaticText] [Lifetime Sales]\n[] [StaticText] [Average Order]\n[] [StaticText] [Last Orders]\n[] [StaticText] [Customer]\n[] [StaticText] [Items]\n[] [StaticText] [Total]\n[] [StaticText] [Last Search Terms]\n[] [StaticText] [Search Term]\n[] [StaticText] [Results]\n[] [StaticText] [Uses]\n[] [StaticText] [Top Search Terms]\n[] [StaticText] [Copyright © 2025 Magento Commerce Inc. All rights reserved.]\n[102] [A] []\n[] [StaticText] [Magento    ver. 2.4.6]\n[103] [A] [Privacy Policy]\n[104] [A] [Account Activity]\n[105] [A] [Report an Issue]",
+  "metadata": {
+    "text": {
+      "obs_nodes_info": {}
+    },
+    "image": {
+      "obs_nodes_info": {
+        "1": [
+          44.0,
+          37.5,
+          35.0,
+          41.0
+        ],
+        "2": [
+          44.0,
+          106.0,
+          88.0,
+          62.0
+        ],
+        "3": [
+          44.0,
+          168.0,
+          88.0,
+          62.0
+        ],
+        "4": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "5": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "6": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "7": [
+          -46.0,
+          202.01171875,
+          238.0,
+          44.0390625
+        ],
+        "8": [
+          -46.0,
+          246.05078125,
+          238.0,
+          44.0390625
+        ],
+        "9": [
+          -46.0,
+          290.08984375,
+          238.0,
+          44.0390625
+        ],
+        "10": [
+          -46.0,
+          334.12890625,
+          238.0,
+          44.0390625
+        ],
+        "11": [
+          -46.0,
+          378.16796875,
+          238.0,
+          44.0390625
+        ],
+        "12": [
+          44.0,
+          230.0,
+          88.0,
+          62.0
+        ],
+        "13": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "14": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "15": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "16": [
+          44.0,
+          292.0,
+          88.0,
+          62.0
+        ],
+        "17": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "18": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "19": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "20": [
+          -46.0,
+          202.01171875,
+          238.0,
+          44.0390625
+        ],
+        "21": [
+          -46.0,
+          246.05078125,
+          238.0,
+          44.0390625
+        ],
+        "22": [
+          44.0,
+          354.0,
+          88.0,
+          62.0
+        ],
+        "23": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "24": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "25": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "26": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "27": [
+          -46.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "28": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "29": [
+          -46.0,
+          486.64453125,
+          238.0,
+          44.0390625
+        ],
+        "30": [
+          44.0,
+          416.0,
+          88.0,
+          62.0
+        ],
+        "31": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "32": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "33": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "34": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "35": [
+          -46.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "36": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "37": [
+          -46.0,
+          585.40234375,
+          238.0,
+          44.0390625
+        ],
+        "38": [
+          -46.0,
+          629.44140625,
+          238.0,
+          44.0390625
+        ],
+        "39": [
+          -46.0,
+          673.48046875,
+          238.0,
+          44.0390625
+        ],
+        "40": [
+          44.0,
+          478.0,
+          88.0,
+          62.0
+        ],
+        "41": [
+          1122.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "42": [
+          222.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "43": [
+          222.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "44": [
+          222.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "45": [
+          222.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "46": [
+          222.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "47": [
+          222.0,
+          486.64453125,
+          238.0,
+          44.0390625
+        ],
+        "48": [
+          490.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "49": [
+          490.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "50": [
+          490.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "51": [
+          490.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "52": [
+          490.0,
+          343.84765625,
+          238.0,
+          44.0390625
+        ],
+        "53": [
+          490.0,
+          387.88671875,
+          238.0,
+          44.0390625
+        ],
+        "54": [
+          490.0,
+          431.92578125,
+          238.0,
+          44.0390625
+        ],
+        "55": [
+          490.0,
+          475.96484375,
+          238.0,
+          44.0390625
+        ],
+        "56": [
+          758.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "57": [
+          758.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "58": [
+          758.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "59": [
+          758.0,
+          398.56640625,
+          238.0,
+          44.0390625
+        ],
+        "60": [
+          758.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "61": [
+          758.0,
+          486.64453125,
+          238.0,
+          44.0390625
+        ],
+        "62": [
+          758.0,
+          530.68359375,
+          238.0,
+          44.0390625
+        ],
+        "63": [
+          758.0,
+          574.72265625,
+          238.0,
+          44.0390625
+        ],
+        "64": [
+          758.0,
+          717.51953125,
+          238.0,
+          44.0390625
+        ],
+        "65": [
+          1026.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "66": [
+          1026.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "67": [
+          44.0,
+          540.0,
+          88.0,
+          62.0
+        ],
+        "68": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "69": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "70": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "71": [
+          -46.0,
+          354.52734375,
+          238.0,
+          44.0390625
+        ],
+        "72": [
+          -46.0,
+          398.56640625,
+          238.0,
+          44.0390625
+        ],
+        "73": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "74": [
+          44.0,
+          602.0,
+          88.0,
+          62.0
+        ],
+        "75": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "76": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "77": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "78": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "79": [
+          -46.0,
+          398.56640625,
+          238.0,
+          44.0390625
+        ],
+        "80": [
+          -46.0,
+          541.36328125,
+          238.0,
+          44.0390625
+        ],
+        "81": [
+          -46.0,
+          585.40234375,
+          238.0,
+          44.0390625
+        ],
+        "82": [
+          -46.0,
+          629.44140625,
+          238.0,
+          44.0390625
+        ],
+        "83": [
+          44.0,
+          670.09375,
+          88.0,
+          74.1875
+        ],
+        "84": [
+          1168.59375,
+          24.51953125,
+          160.09375,
+          19.0390625
+        ],
+        "85": [
+          702.234375,
+          24.25,
+          142.34375,
+          18.5
+        ],
+        "86": [
+          1196.1640625,
+          93.5,
+          106.9375,
+          33.0
+        ],
+        "87": [
+          1109.6796875,
+          93.5,
+          60.03125,
+          33.0
+        ],
+        "88": [
+          1057.6640625,
+          94.5,
+          50.0,
+          35.0
+        ],
+        "89": [
+          250.51953125,
+          181.33203125,
+          132.9765625,
+          33.6796875
+        ],
+        "90": [
+          339.5234375,
+          180.4921875,
+          25.265625,
+          22.0
+        ],
+        "91": [
+          1168.59765625,
+          181.47265625,
+          132.0859375,
+          45.7578125
+        ],
+        "92": [
+          1104.62109375,
+          317.38671875,
+          260.0390625,
+          45.7578125
+        ],
+        "93": [
+          809.60546875,
+          428.671875,
+          29.7421875,
+          18.5
+        ],
+        "94": [
+          550.5859375,
+          603.29296875,
+          111.234375,
+          49.0390625
+        ],
+        "95": [
+          550.5859375,
+          603.79296875,
+          109.234375,
+          48.0390625
+        ],
+        "96": [
+          704.67578125,
+          603.29296875,
+          187.6640625,
+          49.0390625
+        ],
+        "97": [
+          704.67578125,
+          603.29296875,
+          185.6640625,
+          47.0390625
+        ],
+        "98": [
+          875.53125,
+          603.29296875,
+          144.765625,
+          49.0390625
+        ],
+        "99": [
+          875.53125,
+          603.29296875,
+          142.765625,
+          47.0390625
+        ],
+        "100": [
+          1008.09765625,
+          603.29296875,
+          111.0859375,
+          49.0390625
+        ],
+        "101": [
+          1008.09765625,
+          603.29296875,
+          109.0859375,
+          47.0390625
+        ],
+        "102": [
+          128.6640625,
+          1527.8046875,
+          22.046875,
+          25.0
+        ],
+        "103": [
+          971.3671875,
+          1548.59375,
+          87.53125,
+          18.5
+        ],
+        "104": [
+          1079.7890625,
+          1548.59375,
+          106.609375,
+          18.5
+        ],
+        "105": [
+          1198.859375,
+          1548.59375,
+          101.5625,
+          18.5
+        ]
+      }
+    }
+  },
+  "page_url": "http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:7780/admin/admin/dashboard/",
+  "fail_error": ""
+}

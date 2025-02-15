@@ -1,0 +1,12 @@
+results*
+vwa_jsons
+media
+.pytest_cache
+scripts/logs*
+
+# Useless
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+venv/
+.env/

@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 57,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you get the email {description}?",
+  "intent": "Can you get the email of the seller of the second most expensive listing with pigs in the video?",
+  "intermediate_intent": "How much was the second most expensive listing with pigs in the video?",
+  "video": "post_tutorial",
+  "instantiation_dict": {
+    "description": "of the seller of the second most expensive listing with pigs in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "75 |OR| 75.00"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "ananya_schneider275@example.com"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 11
+}

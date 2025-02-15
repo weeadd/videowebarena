@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 59,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Change the license {description}.",
+  "instantiation_dict": {
+    "description": "of the first repo in the video to GNU General Public License v3.0"
+  },
+  "video": "project_tutorial",
+  "intent": "Change the license of the first repo in the video to GNU General Public License v3.0.",
+  "intermediate_intent": "What was the name of the first repo in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "a11y-syntax-highlighting"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/a11y-syntax-highlighting/-/blob/main/LICENSE",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "GNU General Public License v3.0"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 16
+}

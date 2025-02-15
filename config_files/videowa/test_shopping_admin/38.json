@@ -1,0 +1,95 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 38,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Apply the {description}.",
+  "intent": "Apply the first price rule that the person in the video applied with no time bounds but name it \"Valentine's Day Sale\".",
+  "intermediate_intent": "What is the name of the price rule that the person in the video creates?",
+  "video": "marketing_tutorial",
+  "instantiation_dict": {
+    "description": "first price rule that the person in the video applied with no time bounds but name it \"Valentine's Day Sale\""
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Christmas Day Sale"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "",
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/sales_rule/promo_quote",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector(\"[name='name'\").value",
+        "required_contents": {
+          "must_include": [
+            "Valentine's Day Sale"
+          ]
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[name=\"website_ids\"').selectedIndex",
+        "required_contents": {
+          "exact_match": "0"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[name=\"customer_group_ids\"').selectedIndex",
+        "required_contents": {
+          "exact_match": "1"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[name=\"simple_action\"').value",
+        "prep_actions": [
+          "document.querySelector('[data-index=\"actions\"]').querySelector('.admin__collapsible-title').click()"
+        ],
+        "required_contents": {
+          "exact_match": "by_percent"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[name=\"discount_amount\"').value",
+        "prep_actions": [
+          "document.querySelector('[data-index=\"actions\"]').querySelector('.admin__collapsible-title').click()"
+        ],
+        "required_contents": {
+          "exact_match": "20"
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 16
+}

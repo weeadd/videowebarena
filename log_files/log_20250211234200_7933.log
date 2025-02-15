@@ -1,0 +1,5 @@
+2025-02-11 23:42:13,530 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp8t3at2m5/0.json
+2025-02-11 23:42:13,530 - INFO - [Intent]: The person in the video says they are from a certain university. Can you tell me the email of the poster of the cheapest bike from the city the university is based in?
+2025-02-11 23:42:23,947 - INFO - [Unhandled Error] TypeError("generate_from_qwen_chat_completion() got an unexpected keyword argument 'prompt'")]
+2025-02-11 23:42:36,198 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpk9qmp_j3/1.json
+2025-02-11 23:42:36,198 - INFO - [Intent]: The person in the video says 'thanks' at a certain point. Can you take me to the page in the video when the person says this?

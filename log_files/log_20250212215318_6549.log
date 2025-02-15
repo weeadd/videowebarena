@@ -1,0 +1,3 @@
+2025-02-12 21:53:22,743 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp0u7p90u7/5.json
+2025-02-12 21:53:22,744 - INFO - [Intent]: Is going from the park mentioned in the video to Frick Park faster or to Point State Park faster?
+2025-02-12 21:53:54,098 - INFO - [Unhandled Error] TimeoutError('Timeout 30000ms exceeded.\n=========================== logs ===========================\nnavigating to "http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:3000/", waiting until "load"\n============================================================')]

@@ -1,0 +1,45 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 53,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you take me to {description}?",
+  "intent": "Can you take me to the repository that was directly above the one the person in the video clicked on?",
+  "intermediate_intent": "What was the name of the repository that was directly above the one the person in the video clicked on?",
+  "video": "edit_project",
+  "instantiation_dict": {
+    "description": "the repository that was directly above the one the person in the video clicked on"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "ericwbailey.website"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/ericwbailey.website",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

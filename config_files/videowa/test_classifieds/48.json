@@ -1,0 +1,46 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 48,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you find the email {description}?",
+  "intent": "Can you find the email of poster of the first coin listing that appears in the video?",
+  "intermediate_intent": "What was the name of the first coin listing that appears in the video?",
+  "video": "recent_range_links",
+  "instantiation_dict": {
+    "description": "of poster of the first coin listing that appears in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "The Whimsical & Romantic Handcuffs Pin"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "michael_hassan215@example.com"
+      ]
+    }
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 10
+}

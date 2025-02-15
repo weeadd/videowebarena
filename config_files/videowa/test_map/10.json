@@ -1,0 +1,52 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 10,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Recall the second destination in the video. Return its zipcode.",
+  "instantiation_dict": {},
+  "intent": "Recall the second destination in the video. Return its zipcode.",
+  "intermediate_intent": "What was the second destination in the video?",
+  "video": "get_times",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "New York"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "10118"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "easy",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 8
+}

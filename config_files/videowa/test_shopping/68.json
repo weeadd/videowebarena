@@ -1,0 +1,69 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 68,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you add {description2} to my cart?",
+  "intent": "The person in the video states that they need a new budget to buy the item they added to their wishlist. Can you add enough quantity of the TV with the boat on the screen in the video to my cart so it exceeds the mentioned budget to my cart?'",
+  "intermediate_intent": "What was the new budget the person in the video said they needed to buy the item they added to their wishlist? Additionally, what is the name of the TV with the boat on the screen in the video?",
+  "video": "cost_range",
+  "instantiation_dict": {
+    "description": "states that they need a new budget to buy the item they added to their wishlist",
+    "description2": "enough quantity of the TV with the boat on the screen in the video to my cart so it exceeds the mentioned budget"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "12000 |OR| 12,000",
+        "Sceptre E195BD-SRR 19-Inch 720P LED TV, True Black (2017)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Sceptre E195BD-SRR 19-Inch 720P LED TV, True Black (2017)"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart/",
+        "locator": "lambda:(() => {try {return Array.from(document.querySelectorAll(\".item-info\")).find(el => el.textContent.includes(\"Sceptre E195BD-SRR 19-Inch 720P LED TV, True Black (2017)\")).querySelector(\"input\").getAttribute(\"data-item-qty\")} catch (e) {return \" \"}})()",
+        "required_contents": {
+          "must_include": [
+            "58"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

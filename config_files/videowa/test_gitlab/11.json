@@ -1,0 +1,45 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 11,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you take me to {description}?",
+  "intent": "Can you take me to the repo page for the repo whose issue, not assigned to the person in the video, had the most comments in the video?",
+  "intermediate_intent": "What was the name of the repo page for the repo whose issue, not assigned to the person in the video,  had the most comments in the video?",
+  "video": "issue_tutorial",
+  "instantiation_dict": {
+    "description": "the repo page for the repo whose issue, not assigned to the person in the video, had the most comments in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "keycloak"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/http-party/node-http-proxy",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 86,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my comparison page.",
+  "intent": "Add the most expensive visible item in the video to my comparison page.",
+  "intermediate_intent": "What was the name of the most expensive visible item in the video?",
+  "video": "order_history",
+  "instantiation_dict": {
+    "description": "most expensive visible item in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Alaffia Everyday Shea Conditioner, Lavender, 32 Oz. Moisturizes, Restores and Protects. Made with Fair Trade Shea Butter, Cruelty Free, No Parabens, Vegan."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/catalog/product_compare",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Alaffia Everyday Shea Conditioner, Lavender, 32 Oz. Moisturizes, Restores and Protects. Made with Fair Trade Shea Butter, Cruelty Free, No Parabens, Vegan."
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 18
+}

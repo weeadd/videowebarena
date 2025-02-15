@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 9,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you add {description2} to my cart?",
+  "intent": "The person in the video mentions another category besides clothing in the men's section when searching for the last item to add to the cart. Can you add the cheapest item from the mentioned category to my cart?",
+  "intermediate_intent": "What was the other category mentioned besides clothing in the men's section when searching for the last item to add to the cart?",
+  "video": "add_to_cart",
+  "instantiation_dict": {
+    "description": "mentions another category besides clothing in the men's section when searching for the last item to add to the cart",
+    "description2": "the cheapest item from the mentioned category"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "shoes"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "MAPOLO Blue Sharks Pattern Men's Boys Casual Walking Shoes Sneaker Lightweight Stylish Athletic Tennis Sports Running Shoes for Outdoor Hiking Travel Driving"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 5
+}

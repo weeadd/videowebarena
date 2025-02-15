@@ -1,0 +1,67 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 54,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Leave a review on {description}.",
+  "intent": "Leave a review on the last shoes page the person in the video visited, leaving 1 star and mentioning how the shoes run small.",
+  "intermediate_intent": "What was the last shoes page the person in the video visisted?",
+  "video": "buy_shoes",
+  "instantiation_dict": {
+    "description": "the last shoes page the person in the video visited, leaving 1 star and mentioning how the shoes run small"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Nike Men's Lebron Witness IV Basketball Shoes"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+        "locator": "func:shopping_get_sku_latest_review_rating(\"B07TKMM16B\")",
+        "required_contents": {
+          "must_include": [
+            "20"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+        "locator": "func:shopping_get_sku_latest_review_text(\"B07TKMM16B\")",
+        "required_contents": {
+          "must_include": [
+            "run small"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 4
+}

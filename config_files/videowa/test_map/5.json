@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 5,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Is going from the {location1} mentioned in the video to {location2} faster or to {location3} faster?",
+  "instantiation_dict": {
+    "location1": "park",
+    "location2": "Frick Park",
+    "location3": "Point State Park"
+  },
+  "intent": "Is going from the park mentioned in the video to Frick Park faster or to Point State Park faster?",
+  "intermediate_intent": "What was the park mentioned in the video?",
+  "video": "get_times",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Schenley Park"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Frick Park"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

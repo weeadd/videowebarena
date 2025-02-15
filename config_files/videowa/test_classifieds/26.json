@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 26,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you change {description}?",
+  "intent": "Can you change the price of my cheapest listing to be the same as the most expensive listing in the video?",
+  "intermediate_intent": "What was the price of the most expensive listing in the video?",
+  "video": "sort_by_recent",
+  "instantiation_dict": {
+    "description": "the price of my cheapest listing to be the same as the most expensive listing in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "16500 |OR| 16500.00"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=/index.php?page=item&id=84154",
+        "locator": "func:get_query_text(__page__, '.price')",
+        "required_contents": {
+          "must_include": [
+            "16500.00"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 2
+}

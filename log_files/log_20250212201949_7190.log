@@ -1,0 +1,37 @@
+2025-02-12 20:20:02,836 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp7qp007k5/18.json
+2025-02-12 20:20:02,837 - INFO - [Intent]: The person in the video says 'thank you' at a certain point in the video. Can you take me to the page they were on when they say this?
+2025-02-12 20:20:20,840 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '21', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [21]```'}
+2025-02-12 20:21:36,571 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '14', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [14]```'}
+2025-02-12 20:21:42,457 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '14', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [14]```.'}
+2025-02-12 20:21:49,071 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '48', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [48]```'}
+2025-02-12 20:21:55,445 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://homepage.com]```.'}
+2025-02-12 20:22:00,855 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399]```<|im_end|>'}
+2025-02-12 20:22:07,096 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399]```<|im_end|>'}
+2025-02-12 20:22:11,841 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399]```'}
+2025-02-12 20:22:15,437 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:4399', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://homepage.com]```.'}
+2025-02-12 20:22:16,221 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'Early stop: Same action for 5 times', 'raw_prediction': ''}
+2025-02-12 20:22:16,431 - INFO - [Intermidiate Intent]: What page was the person in the video on when they said 'thank you'?
+2025-02-12 20:22:16,431 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Explore and manage issues in a GitLab repository, including viewing, assigning, and filtering issues.
+    action: Navigate to the repository with the most issues.
+    action: Click on 'Issues' in the left menu bar.
+    action: Search for different issues using the search bar.
+    action: Enter 'GitHub' to search for GitHub-related issues.
+    action: Click on 'Open' to filter for open issues.
+task: Create a new issue with specific details such as assignee, due date, and label.
+    action: Click on the 'New Issue' blue button.
+    action: Enter 'McCall's test issue' as the issue title.
+    action: Assign the issue to the 'Ally project'.
+    action: Set the due date to the 30th of September.
+    action: Add 'Accessibility' as a label.
+    action: Click 'Create' to create the issue.
+task: Navigate and manage milestones, including viewing and creating new milestones.
+    action: Navigate to 'Milestones'.
+    action: Enter 'testMilestone' as the milestone name.
+    action: Add different participants to the milestone.
+    action: Close the milestone if needed.
+    action: Delete the milestone if needed.
+2025-02-12 20:22:16,438 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp7qp007k5/18.json
+2025-02-12 20:22:16,438 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp7qp007k5/18.json
+2025-02-12 20:22:17,495 - INFO - Average score: 0.0
+2025-02-12 20:22:17,496 - INFO - Average intermediate score: 0.0

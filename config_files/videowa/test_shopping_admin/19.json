@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 19,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Take me to {description}.",
+  "intent": "Take me to the customer information on customers with the same phone number as the one the person in the video filtered with (no spaces or dashes).",
+  "intermediate_intent": "What was the phone number the person in the video filtered with (no spaces or dashes)?",
+  "video": "customer_tutorial",
+  "instantiation_dict": {
+    "description": "the customer information on customers with the same phone number as the one the person in the video filtered with (no spaces or dashes)"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "3105555555"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/customer/index/",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector(\"div.admin__data-grid-filters-current\").outerText",
+        "required_contents": {
+          "must_include": [
+            "3105555555"
+          ]
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "overall_difficulty": "easy",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

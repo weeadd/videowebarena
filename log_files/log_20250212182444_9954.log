@@ -1,0 +1,37 @@
+2025-02-12 18:25:45,606 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpop6uvjxw/8.json
+2025-02-12 18:25:45,622 - INFO - [Intent]: Can you tell me the the email of the seller of the first farm animal listing in the video?
+2025-02-12 18:26:12,488 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '46', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [46]```<|im_end|>\n<|im_start|>assistant\nIn summary, the next action I will perform is ```click [46]```'}
+2025-02-12 18:26:27,075 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '19', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [19]```.'}
+2025-02-12 18:26:33,856 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '14', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [14]```'}
+2025-02-12 18:26:43,471 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '16', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [16]```'}
+2025-02-12 18:26:51,764 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '7', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [7]```.'}
+2025-02-12 18:26:58,613 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'svetlana_brown67@example.com', 'raw_prediction': 'In summary, the next action I will perform is ```stop [svetlana_brown67@example.com]```.'}
+2025-02-12 18:26:59,318 - INFO - [Intermidiate Intent]: What was the name of the first farm animal listing in the video?
+2025-02-12 18:26:59,318 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Learn how to find posts and sort by category, price, state, city, and price range, and view listings by recency and price.
+    action: Click on the state "Ohio" in the all locations button.
+    action: Set the price range from a minimum to a maximum.
+task: Start your search by going to the bottom and looking at all categories.
+    action: Go to the bottom and look at all categories.
+task: Proceed to categories if not interested in items without a state.
+    action: Click on a category.
+task: Filter by state by clicking on a state in the all locations button.
+    action: Click on the state "Ohio" in the all locations button.
+task: Set a price range for your search.
+    action: Set the price range from a minimum to a maximum.
+task: View posts sorted by newly listed items and adjust sorting to view by lowest or highest price.
+    action: Hover over the sorting button and click one of the options to sort by price.
+task: Navigate back to the home page using the OS class button.
+    action: Click on the OS class button at the top of the page to navigate back to the home page.
+task: Use zero filters as the default setting.
+    action: Click apply to reset the price range to no filters.
+task: Filter by city to view items near a specific location.
+    action: Select the city "Dumfries" to filter by city.
+task: Navigate the website and manipulate filters to find desired items.
+    action: Hover over the sorting button and click one of the options to sort by price.
+    action: Click apply to reset the price range to no filters.
+    action: Select the city "Dumfries" to filter by city.
+2025-02-12 18:26:59,326 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpop6uvjxw/8.json
+2025-02-12 18:26:59,326 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpop6uvjxw/8.json
+2025-02-12 18:27:00,073 - INFO - Average score: 0.0
+2025-02-12 18:27:00,073 - INFO - Average intermediate score: 0.0

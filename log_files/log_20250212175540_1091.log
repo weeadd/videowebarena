@@ -1,0 +1,34 @@
+2025-02-12 17:55:40,652 - INFO - Create result dir: /Users/kevin/Documents/vwa/videowebarena/results_2-12_v3_with_VideoGUIsummary//test_classifieds/-
+2025-02-12 17:55:40,655 - INFO - Dump config to /Users/kevin/Documents/vwa/videowebarena/results_2-12_v3_with_VideoGUIsummary/test_classifieds/-/config.json
+2025-02-12 17:56:33,592 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpwdabrt09/6.json
+2025-02-12 17:56:33,592 - INFO - [Intent]: The person in the video says 'thanks' at a certain point. Can you take me to the page in the video when the person says this?
+2025-02-12 17:56:44,576 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'ERROR: GPT-4V models do not support mode completion', 'raw_prediction': ''}
+2025-02-12 17:56:45,079 - INFO - [Intermidiate Intent]: What was the page the person in the video was on when they said 'thanks'?
+2025-02-12 17:56:45,079 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Learn how to find posts and sort by category, price, state, city, and price range, and view listings by recency and price.
+    action: Click on the state "Ohio" in the all locations button.
+    action: Set the price range from a minimum to a maximum.
+task: Start your search by going to the bottom and looking at all categories.
+    action: Go to the bottom and look at all categories.
+task: Proceed to categories if not interested in items without a state.
+    action: Click on a category.
+task: Filter by state by clicking on a state in the all locations button.
+    action: Click on the state "Ohio" in the all locations button.
+task: Set a price range for your search.
+    action: Set the price range from a minimum to a maximum.
+task: View posts sorted by newly listed items and adjust sorting to view by lowest or highest price.
+    action: Hover over the sorting button and click one of the options to sort by price.
+task: Navigate back to the home page using the OS class button.
+    action: Click on the OS class button at the top of the page to navigate back to the home page.
+task: Use zero filters as the default setting.
+    action: Click apply to reset the price range to no filters.
+task: Filter by city to view items near a specific location.
+    action: Select the city "Dumfries" to filter by city.
+task: Navigate the website and manipulate filters to find desired items.
+    action: Hover over the sorting button and click one of the options to sort by price.
+    action: Click apply to reset the price range to no filters.
+    action: Select the city "Dumfries" to filter by city.
+2025-02-12 17:56:45,086 - INFO - [Intermediate Result] (PASS) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpwdabrt09/6.json
+2025-02-12 17:56:45,086 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpwdabrt09/6.json
+2025-02-12 17:56:45,232 - INFO - Average score: 0.0
+2025-02-12 17:56:45,232 - INFO - Average intermediate score: 1.0

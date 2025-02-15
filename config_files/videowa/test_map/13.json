@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 13,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Recall the state to the west of the first state mentioned in the video. Show me the distance between its capital and New York City?",
+  "instantiation_dict": {},
+  "intent": "Recall the state to the west of the first state mentioned in the video. Show me the distance between its capital and New York City?",
+  "intermediate_intent": "What was the first state mentioned in the video?",
+  "video": "get_border",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "New York",
+        "Albany"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000/directions?engine=fossgis_osrm_car&route=42.651%2C-73.755%3B40.713%2C-74.006#map=8/41.689/-73.971",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 11
+}

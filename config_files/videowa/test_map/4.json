@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "map"
+  ],
+  "task_id": 4,
+  "require_login": false,
+  "storage_state": "./.auth/map_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000",
+  "geolocation": null,
+  "intent_template": "Return the page that shows how long it takes to get from the first destination in the video to the second destination?",
+  "instantiation_dict": {},
+  "intent": "Return the page that shows how long it takes to get from the first destination in the video to the second destination?",
+  "intermediate_intent": "What were the first and second destinations in the video?",
+  "video": "get_times",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Boston",
+        "New York"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:3000/directions?engine=fossgis_osrm_car&route=42.355%2C-71.061%3B40.713%2C-74.006#map=8/41.540/-72.532",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 4
+}

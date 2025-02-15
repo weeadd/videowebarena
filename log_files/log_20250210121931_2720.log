@@ -1,0 +1,3 @@
+2025-02-10 12:19:31,886 - INFO - File config_files/videowa/test_classifieds/63.json does not exist
+2025-02-10 12:19:31,887 - INFO - File config_files/videowa/test_classifieds/67.json does not exist
+2025-02-10 12:19:36,628 - INFO - [Unhandled Error] AssertionError()]

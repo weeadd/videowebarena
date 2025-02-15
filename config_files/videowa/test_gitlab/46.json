@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 46,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you create a group {description}?",
+  "intent": "Can you create a group called 'videowebarena' and add the first group of users that were added in the video?",
+  "intermediate_intent": "What were the @s of the first group of users added to the group in the video?",
+  "video": "create_group",
+  "instantiation_dict": {
+    "description1": "called 'videowebarena1' and add the first group of users that were added in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "@antikalk",
+        "@hartkopp",
+        "@OliverwengFiltered"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/groups/videowebarena1/-/group_members",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "@antikalk",
+            "@hartkopp",
+            "@OliverwengFiltered"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 13
+}

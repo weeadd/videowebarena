@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 3,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you follow {description}?",
+  "intent": "Can you follow the last two users whose user page the person in the video visited?",
+  "intermediate_intent": "What are the names of the last two users whose user page the person in the video visited?",
+  "video": "explore_star_tutorial",
+  "instantiation_dict": {
+    "description": "the last two users whose user page the person in the video visited"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Roshan Jossy |OR| @Roshanjossey",
+        "Meta |OR| @facebook"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/users/byteblaze/following",
+        "locator": "document.querySelector('.user-profile').outerText",
+        "required_contents": {
+          "must_include": [
+            "@Roshanjossey",
+            "@facebook"
+          ]
+        }
+      }
+    ]
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 1
+}

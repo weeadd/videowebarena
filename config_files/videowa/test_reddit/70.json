@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 70,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you leave a comment {description}?",
+  "intent": "Can you leave a comment saying 'first downvote' on the first post in the video that gets a downvote??",
+  "intermediate_intent": "What was the name of the first post in the video that gets a downvote?",
+  "video": "vote_all_poster",
+  "instantiation_dict": {
+    "description": "saying 'first downvote' on the first post in the video that gets a downvote?"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "[N] new SNAPCHAT feature transfers an image of an upper body garment in realtime on a person in AR"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+        "locator": "func:reddit_get_latest_comment_content_by_username(__page__, 'MarvelsGrantMan136')",
+        "required_contents": {
+          "exact_match": "first downvote"
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 1
+}

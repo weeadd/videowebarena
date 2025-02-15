@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 21,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you upvote all the posts {description}?",
+  "intent": "Can you upvote all the posts that come up when you search for x, where x is the combined search terms from the video in chronological order split by space?",
+  "intermediate_intent": "What is the combined search terms from the video in chronological order split by space?",
+  "video": "search",
+  "instantiation_dict": {
+    "description": "that come up when you search for x, where x is the combined search terms from the video in chronological order split by space"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "soccer world cup ronaldo"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/nosleep/130101/what-happened-at-hotel-carlton",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-upvoted"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 7
+}

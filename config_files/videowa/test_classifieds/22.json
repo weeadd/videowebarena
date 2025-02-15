@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 22,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you tell {description}?",
+  "intent": "Can you tell me the email of the second item page the person in the video went to?",
+  "intermediate_intent": "What was the name of the second item page the person in the video went to?",
+  "video": "image_page",
+  "instantiation_dict": {
+    "description": "me the email of the second item page the person in the video went to"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Ford 8670"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "daiki.kov\u00c3\u00a1cs375@example.com"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 6
+}

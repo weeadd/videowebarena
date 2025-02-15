@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 30,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you take me {description}?",
+  "intent": "Can you take me to the most expensive item in the third column for the second category page the person in the video visits?",
+  "intermediate_intent": "What was the name of the most expensive item in the third column for the second category page the person in the video visits?",
+  "video": "spatial_tutorial",
+  "instantiation_dict": {
+    "description": "to the most expensive item in the third column for the second category page the person in the video visits"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Vintage John Sexton Signed Poster From Listen To The Trees"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=14453",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 9
+}

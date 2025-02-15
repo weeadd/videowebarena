@@ -1,0 +1,73 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 46,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Generate the {description}.",
+  "intent": "Generate the invoiced report with from 8/30/2022 to 7/31/2023 with period same as the period first filtered in the video.",
+  "intermediate_intent": "What is the period first filtered for in the video?.",
+  "video": "report_tutorial",
+  "instantiation_dict": {
+    "description": "invoiced report with from 8/30/2022 to 7/31/2023 with period same as the period first filtered in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Month |OR| month"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "",
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/reports/report_sales/invoiced",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_period_type\"').value",
+        "required_contents": {
+          "exact_match": "Month"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_from\"').value",
+        "required_contents": {
+          "exact_match": "8/30/22"
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('[id=\"sales_report_to\"').value",
+        "required_contents": {
+          "exact_match": "7/31/23"
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 19
+}

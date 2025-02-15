@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 58,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you get the name {description}?",
+  "intent": "Can you get the name of the seller of the cheapest computer listing from Pennsylvania in the video?",
+  "intermediate_intent": "What was the name of the cheapest computer listing from Pennsylvania in the video?",
+  "video": "post_tutorial",
+  "instantiation_dict": {
+    "description": "of the seller of the cheapest computer listing from Pennsylvania in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "HP Laptop"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Emma Williams"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 12
+}

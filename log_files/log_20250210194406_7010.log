@@ -1,0 +1,5 @@
+2025-02-10 19:44:06,272 - INFO - File config_files/videowa/test_classifieds/63.json does not exist
+2025-02-10 19:44:06,272 - INFO - File config_files/videowa/test_classifieds/67.json does not exist
+2025-02-10 19:44:19,778 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp8nsetb_a/56.json
+2025-02-10 19:44:19,778 - INFO - [Intent]: The person in the video mentions they are getting a new laptop. Can you get the cheapest listing in Computers that is from the same company as the new laptop they say they are getting?
+2025-02-10 19:44:20,420 - INFO - [Unhandled Error] Error('net::ERR_ABORTED at ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980\n=========================== logs ===========================\nnavigating to "ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980", waiting until "load"\n============================================================')]

@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 16,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you take me to {description}?",
+  "intent": "Can you take me to the most expensive listing listed on November 16 2023 shown in the video?",
+  "intermediate_intent": "What was the name of the most expensive listing listed on November 16 2023 shown in the video?",
+  "video": "sort_by_price_range",
+  "instantiation_dict": {
+    "description": "the most expensive listing listed on November 16 2023 shown in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Canon EF 100-400mm f/4.5-5.6L IS II USM with extender EF 1.4X III"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=10542",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 1
+}

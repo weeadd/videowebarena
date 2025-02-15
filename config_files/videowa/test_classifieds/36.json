@@ -1,0 +1,45 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 36,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you find {description}?",
+  "intent": "Can you find the first listing in the video that appeared with an image of a car?",
+  "intermediate_intent": "What was the first listing in the video that appeared with an image of a car?",
+  "video": "edit_listings",
+  "instantiation_dict": {
+    "description": "the first listing in the video that appeared with an image of a car"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Pristine 2021 Toyota 86 - Low Miles, Factory Warranty"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=84144",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 3
+}

@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 19,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "{condition}. Add {description} to my cart.",
+  "intent": "When searching for cheese, the person in the video mentions they are looking for a certain type of cheese first. Add the type of cheese they mentioned first to my cart.",
+  "intermediate_intent": "When searching for cheese, the person in the video mentions they are looking for a certain type of cheese first, which is it?",
+  "video": "add_ingredients_to_cart",
+  "instantiation_dict": {
+    "condition": "When searching for cheese, the person in the video mentions they are looking for a certain type of cheese first",
+    "description": "type of cheese they mentioned first"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "mozzarella"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "mozzarella"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 10
+}

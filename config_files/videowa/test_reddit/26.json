@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 26,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "For the {description}, can you {description2}?",
+  "intent": "For the person on the left in the first image that was reposted, can you search their full name and return the fourth post that comes up?",
+  "intermediate_intent": "What is the full name of the person on the left in the first image that was reposted?",
+  "video": "repost",
+  "instantiation_dict": {
+    "description": "person on the left in the first image that was reposted",
+    "description2": "search their full name and return the fourth post that comes up"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "lebron james"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/sports/92212/lebron-james-becomes-second-player-in-nba-history-to-reach",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 10
+}

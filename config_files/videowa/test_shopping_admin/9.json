@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 9,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "The person in the video {description}. Can you take me to {description2}?",
+  "intent": "The person in the video searches for reviews with the word \"good\" in it under the Review tab of All Reviews?. Can you take me to the review details of the review at the top?",
+  "intermediate_intent": "The person in the video searches for reviews with the word good in it under the Review tab of All Reviews? What is the ID of the review at the top?",
+  "video": "see_reviews_tutorial",
+  "instantiation_dict": {
+    "description": "searches for reviews with the word \"good\" in it under the Review tab of All Reviews?",
+    "description2": "the review details of the review at the top"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "138"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/review/product/edit/id/334/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 4
+}

@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 3,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you change {description}?",
+  "intent": "Can you change the first refined search in the video by increasing the max price to $40000 and then comment 'too expensive' on the most expensive item?",
+  "intermediate_intent": "What was the original max price in the first refined search?",
+  "video": "search_sort_comment",
+  "instantiation_dict": {
+    "description": "the first refined search in the video by increasing the max price to $40000 and then comment 'too expensive' on the most expensive item"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "25000"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=3940",
+        "locator": "func:get_query_text(__page__, '.comments_list')",
+        "required_contents": {
+          "must_include": [
+            "too expensive"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 2
+}

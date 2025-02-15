@@ -1,0 +1,37 @@
+2025-02-12 18:40:24,047 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpr7305m42/19.json
+2025-02-12 18:40:24,048 - INFO - [Intent]: The person in the video says 'thanks' at a certain point. Can you take me to the page in the video when the person says this?
+2025-02-12 18:40:36,232 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '25', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [25]```.'}
+2025-02-12 18:40:42,195 - INFO - [Action]: {'action_type': <ActionTypes.GO_BACK: 11>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```go_back```.'}
+2025-02-12 18:43:57,411 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:9980/', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://classifieds.com/]```.'}
+2025-02-12 18:44:10,111 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '46', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [46]```.'}
+2025-02-12 18:44:16,629 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '24', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [24]```.'}
+2025-02-12 18:44:23,274 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:44:30,231 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:44:35,822 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:44:41,411 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'up', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [up]```'}
+2025-02-12 18:44:47,097 - INFO - [Action]: {'action_type': <ActionTypes.SCROLL: 1>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': 'down', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```scroll [down]```.'}
+2025-02-12 18:44:54,737 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'Craftsman 27inch snowblower with cab enclosure. Asking 750 thanks for looking', 'raw_prediction': 'In summary, the next action I will perform is ```stop [Craftsman 27inch snowblower with cab enclosure. Asking 750 thanks for looking]```.'}
+2025-02-12 18:44:55,310 - INFO - [Intermidiate Intent]: What was the page the person in the video was on when they said 'thanks'?
+2025-02-12 18:44:55,310 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Navigate to an item page to search for an item and view all item details.
+    action: Navigate to an item page.
+    action: Search for an item.
+task: Filter listings by location before selecting a category if needed.
+task: Filter posts by a specific location, such as Virginia.
+    action: Filter posts by location, specifically Virginia.
+task: Select a category, such as farm and gardening items, to view relevant posts.
+    action: Select a category from the list.
+    action: Choose 'Farm and Gardening' items.
+task: Sort posts by criteria such as most recent, cheapest, or most expensive.
+    action: Sort the listings by the most recent post.
+    action: Sort the listings by the cheapest post.
+    action: Sort the listings by the most expensive post.
+task: Review post details including the title, poster's name, email, and description.
+    action: View the name and email of the poster.
+    action: Review the description information of the item.
+task: View items without location restrictions by selecting a category directly.
+    action: Go directly to 'Farming Garden' without location restriction.
+2025-02-12 18:44:55,328 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpr7305m42/19.json
+2025-02-12 18:44:55,329 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpr7305m42/19.json
+2025-02-12 18:44:56,127 - INFO - Average score: 0.0
+2025-02-12 18:44:56,127 - INFO - Average intermediate score: 0.0

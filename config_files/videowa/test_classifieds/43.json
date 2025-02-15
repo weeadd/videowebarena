@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 43,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you comment {description}?",
+  "intent": "Can you comment 'testing comment functionality' on the first item the user commented on in the video?",
+  "intermediate_intent": "What was the name of the first item the user commented on in the video?",
+  "video": "multiple_tabs",
+  "instantiation_dict": {
+    "description": "'testing comment functionality' on the first item the user commented on in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Books ONE DOLLAR!!!"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=22560",
+        "locator": "func:get_query_text(__page__, '.comments_list')",
+        "required_contents": {
+          "must_include": [
+            "testing comment functionality"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 7
+}

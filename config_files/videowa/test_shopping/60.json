@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 60,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my cart.",
+  "intent": "Add the same price and type of item as the item added to the cart at the end of the video, but with a different NFL team to my cart.",
+  "intermediate_intent": "What was the name of the item added to the cart at the end of the video?",
+  "video": "remove_from_cart",
+  "instantiation_dict": {
+    "description": "same price and type of item as the item added to the cart at the end of the video, but with a different NFL team"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Skinit Decal Gaming Skin Compatible with PS4 Controller - Officially Licensed NFL Los Angeles Rams Zone Block Design"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Skinit Decal Gaming Skin Compatible with PS4 Controller - Officially Licensed NFL Los Angeles Rams Zone Block Design"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 0
+}

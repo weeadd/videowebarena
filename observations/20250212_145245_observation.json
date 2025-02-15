@@ -1,0 +1,596 @@
+{
+  "text_observation": "[1] [IMG] [Magento Admin Panel]\n[] [StaticText] [Dashboard]\n[2] [A] [Dashboard]\n[] [StaticText] [SalesSalesOperationsOrdersInvoicesShipmentsCredit MemosBilling AgreementsTransactionsBraintree Virtual Terminal]\n[3] [A] [Sales]\n[4] [A] []\n[] [StaticText] [OperationsOrdersInvoicesShipmentsCredit MemosBilling AgreementsTransactionsBraintree Virtual Terminal]\n[] [StaticText] [Orders]\n[5] [A] [Orders]\n[] [StaticText] [Invoices]\n[6] [A] [Invoices]\n[] [StaticText] [Shipments]\n[7] [A] [Shipments]\n[] [StaticText] [Credit Memos]\n[8] [A] [Credit Memos]\n[] [StaticText] [Billing Agreements]\n[9] [A] [Billing Agreements]\n[] [StaticText] [Transactions]\n[10] [A] [Transactions]\n[] [StaticText] [Braintree Virtual Terminal]\n[11] [A] [Braintree Virtual Terminal]\n[] [StaticText] [CatalogCatalogInventoryProductsCategories]\n[12] [A] [Catalog]\n[13] [A] []\n[] [StaticText] [InventoryProductsCategories]\n[] [StaticText] [Products]\n[14] [A] [Products]\n[] [StaticText] [Categories]\n[15] [A] [Categories]\n[] [StaticText] [CustomersCustomersAll CustomersNow OnlineLogin as Customer LogCustomer Groups]\n[16] [A] [Customers]\n[17] [A] []\n[] [StaticText] [All Customers]\n[18] [A] [All Customers]\n[] [StaticText] [Now Online]\n[19] [A] [Now Online]\n[] [StaticText] [Login as Customer Log]\n[20] [A] [Login as Customer Log]\n[] [StaticText] [Customer Groups]\n[21] [A] [Customer Groups]\n[] [StaticText] [MarketingMarketingPromotionsCatalog Price RuleCart Price RulesCommunicationsEmail TemplatesNewsletter TemplatesNewsletter QueueNewsletter SubscribersSEO & SearchURL RewritesSearch TermsSearch Synonyms]\n[22] [A] [Marketing]\n[23] [A] []\n[] [StaticText] [SEO & SearchURL RewritesSearch TermsSearch SynonymsSite MapUser ContentAll ReviewsPending Reviews]\n[] [StaticText] [SEO & SearchURL RewritesSearch TermsSearch SynonymsSite Map]\n[] [StaticText] [URL Rewrites]\n[24] [A] [URL Rewrites]\n[] [StaticText] [Search Terms]\n[25] [A] [Search Terms]\n[] [StaticText] [Search Synonyms]\n[26] [A] [Search Synonyms]\n[] [StaticText] [Site Map]\n[27] [A] [Site Map]\n[] [StaticText] [User ContentAll ReviewsPending Reviews]\n[] [StaticText] [All Reviews]\n[28] [A] [All Reviews]\n[] [StaticText] [Pending Reviews]\n[29] [A] [Pending Reviews]\n[] [StaticText] [ContentContentElementsPagesBlocksWidgetsTemplatesMediaMedia GalleryDesignConfigurationThemesSchedule]\n[30] [A] [Content]\n[31] [A] []\n[] [StaticText] [ElementsPagesBlocksWidgetsTemplates]\n[] [StaticText] [Pages]\n[32] [A] [Pages]\n[] [StaticText] [Blocks]\n[33] [A] [Blocks]\n[] [StaticText] [Widgets]\n[34] [A] [Widgets]\n[] [StaticText] [Templates]\n[35] [A] [Templates]\n[] [StaticText] [MediaMedia Gallery]\n[] [StaticText] [Media Gallery]\n[36] [A] [Media Gallery]\n[] [StaticText] [DesignConfigurationThemesSchedule]\n[] [StaticText] [Configuration]\n[37] [A] [Configuration]\n[] [StaticText] [Themes]\n[38] [A] [Themes]\n[] [StaticText] [Schedule]\n[39] [A] [Schedule]\n[] [StaticText] [ReportsReportsMarketingProducts in CartSearch TermsAbandoned CartsNewsletter Problem ReportsReviewsBy CustomersBy ProductsSalesOrdersTaxInvoicedShippingRefundsCouponsPayPal SettlementBraintree Settlem]\n[40] [A] [Reports]\n[41] [A] []\n[] [StaticText] [Business IntelligenceAdvanced ReportingBI Essentials]\n[] [StaticText] [Business Intelligence]\n[] [StaticText] [Advanced Reporting]\n[42] [A] [Advanced Reporting]\n[] [StaticText] [BI Essentials]\n[43] [A] [BI Essentials]\n[] [StaticText] [StoresStoresSettingsAll StoresConfigurationTerms and ConditionsOrder StatusInventorySourcesStocksTaxesTax RulesTax Zones and RatesCurrencyCurrency RatesCurrency SymbolsAttributesProductAttribute SetRa]\n[44] [A] [Stores]\n[45] [A] []\n[] [StaticText] [CurrencyCurrency RatesCurrency SymbolsAttributesProductAttribute SetRating]\n[] [StaticText] [CurrencyCurrency RatesCurrency Symbols]\n[] [StaticText] [Currency Rates]\n[46] [A] [Currency Rates]\n[] [StaticText] [Currency Symbols]\n[47] [A] [Currency Symbols]\n[] [StaticText] [AttributesProductAttribute SetRating]\n[] [StaticText] [Product]\n[48] [A] [Product]\n[] [StaticText] [Attribute Set]\n[49] [A] [Attribute Set]\n[] [StaticText] [Rating]\n[50] [A] [Rating]\n[] [StaticText] [SystemSystemData TransferImportExportImport/Export Tax RatesImport HistoryExtensionsIntegrationsToolsCache ManagementIndex ManagementPermissionsAll UsersLocked UsersUser RolesAction LogsBulk ActionsOt]\n[51] [A] [System]\n[52] [A] []\n[] [StaticText] [PermissionsAll UsersLocked UsersUser RolesAction LogsBulk ActionsOther SettingsNotificationsCustom VariablesManage Encryption Key]\n[] [StaticText] [PermissionsAll UsersLocked UsersUser Roles]\n[] [StaticText] [All Users]\n[53] [A] [All Users]\n[] [StaticText] [Locked Users]\n[54] [A] [Locked Users]\n[] [StaticText] [User Roles]\n[55] [A] [User Roles]\n[] [StaticText] [Action LogsBulk Actions]\n[] [StaticText] [Bulk Actions]\n[56] [A] [Bulk Actions]\n[] [StaticText] [Other SettingsNotificationsCustom VariablesManage Encryption Key]\n[] [StaticText] [Notifications]\n[57] [A] [Notifications]\n[] [StaticText] [Custom Variables]\n[58] [A] [Custom Variables]\n[] [StaticText] [Manage Encryption Key]\n[59] [A] [Manage Encryption Key]\n[] [StaticText] [Find Partners & Extensions]\n[60] [A] [Find Partners & Extensions]\n[61] [BUTTON] [System Messages:                    1]\n[] [StaticText] [System Messages]\n[62] [A] [Retry Synchronization]\n[] [StaticText] [PayPal Settlement Reports]\n[63] [A] [admin]\n[64] [A] []\n[65] [INPUT] []\n[66] [BUTTON] [Fetch Updates]\n[67] [BUTTON] [Search]\n[68] [BUTTON] [Reset Filter]\n[] [StaticText] [0]\n[69] [SELECT] [20                                                        30                                                        50                                                        100                       ]\n[70] [BUTTON] [Previous page]\n[71] [INPUT] []\n[] [StaticText] [1]\n[72] [BUTTON] [Next page]\n[] [StaticText] [Report Date]\n[] [StaticText] [Merchant Account]\n[] [StaticText] [Transaction ID]\n[] [StaticText] [Invoice ID]\n[] [StaticText] [PayPal Reference ID]\n[] [StaticText] [Event]\n[] [StaticText] [Start Date]\n[] [StaticText] [Finish Date]\n[] [StaticText] [Gross Amount]\n[] [StaticText] [Fee Amount]\n[73] [INPUT] []\n[74] [BUTTON] [undefined]\n[75] [INPUT] []\n[76] [BUTTON] [undefined]\n[77] [INPUT] []\n[78] [INPUT] []\n[79] [INPUT] []\n[80] [INPUT] []\n[81] [SELECT] [ACH Deposit (Hold for Dispute or Other Investigation)ACH Deposit (Reversal)ACH Funding for Funds Recovery from Account BalanceACH WithdrawalAccount-to-Account Payment, initiated by PayPalAuction Payme]\n[82] [INPUT] []\n[83] [BUTTON] [undefined]\n[84] [INPUT] []\n[85] [BUTTON] [undefined]\n[86] [INPUT] []\n[87] [BUTTON] [undefined]\n[88] [INPUT] []\n[89] [BUTTON] [undefined]\n[90] [INPUT] []\n[91] [INPUT] []\n[92] [INPUT] []\n[93] [INPUT] []\n[] [StaticText] [Copyright © 2025 Magento Commerce Inc. All rights reserved.]\n[94] [A] []\n[] [StaticText] [Magento    ver. 2.4.6]\n[95] [A] [Privacy Policy]\n[96] [A] [Account Activity]\n[97] [A] [Report an Issue]",
+  "metadata": {
+    "text": {
+      "obs_nodes_info": {}
+    },
+    "image": {
+      "obs_nodes_info": {
+        "1": [
+          44.0,
+          37.5,
+          35.0,
+          41.0
+        ],
+        "2": [
+          44.0,
+          106.0,
+          88.0,
+          62.0
+        ],
+        "3": [
+          44.0,
+          168.0,
+          88.0,
+          62.0
+        ],
+        "4": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "5": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "6": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "7": [
+          -46.0,
+          202.01171875,
+          238.0,
+          44.0390625
+        ],
+        "8": [
+          -46.0,
+          246.05078125,
+          238.0,
+          44.0390625
+        ],
+        "9": [
+          -46.0,
+          290.08984375,
+          238.0,
+          44.0390625
+        ],
+        "10": [
+          -46.0,
+          334.12890625,
+          238.0,
+          44.0390625
+        ],
+        "11": [
+          -46.0,
+          378.16796875,
+          238.0,
+          44.0390625
+        ],
+        "12": [
+          44.0,
+          230.0,
+          88.0,
+          62.0
+        ],
+        "13": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "14": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "15": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "16": [
+          44.0,
+          292.0,
+          88.0,
+          62.0
+        ],
+        "17": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "18": [
+          -46.0,
+          113.93359375,
+          238.0,
+          44.0390625
+        ],
+        "19": [
+          -46.0,
+          157.97265625,
+          238.0,
+          44.0390625
+        ],
+        "20": [
+          -46.0,
+          202.01171875,
+          238.0,
+          44.0390625
+        ],
+        "21": [
+          -46.0,
+          246.05078125,
+          238.0,
+          44.0390625
+        ],
+        "22": [
+          44.0,
+          354.0,
+          88.0,
+          62.0
+        ],
+        "23": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "24": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "25": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "26": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "27": [
+          -46.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "28": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "29": [
+          -46.0,
+          486.64453125,
+          238.0,
+          44.0390625
+        ],
+        "30": [
+          44.0,
+          416.0,
+          88.0,
+          62.0
+        ],
+        "31": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "32": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "33": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "34": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "35": [
+          -46.0,
+          299.80859375,
+          238.0,
+          44.0390625
+        ],
+        "36": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "37": [
+          -46.0,
+          585.40234375,
+          238.0,
+          44.0390625
+        ],
+        "38": [
+          -46.0,
+          629.44140625,
+          238.0,
+          44.0390625
+        ],
+        "39": [
+          -46.0,
+          673.48046875,
+          238.0,
+          44.0390625
+        ],
+        "40": [
+          44.0,
+          478.0,
+          88.0,
+          62.0
+        ],
+        "41": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "42": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "43": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "44": [
+          44.0,
+          540.0,
+          88.0,
+          62.0
+        ],
+        "45": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "46": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "47": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "48": [
+          -46.0,
+          354.52734375,
+          238.0,
+          44.0390625
+        ],
+        "49": [
+          -46.0,
+          398.56640625,
+          238.0,
+          44.0390625
+        ],
+        "50": [
+          -46.0,
+          442.60546875,
+          238.0,
+          44.0390625
+        ],
+        "51": [
+          44.0,
+          602.0,
+          88.0,
+          62.0
+        ],
+        "52": [
+          50.23828125,
+          34.26953125,
+          75.5234375,
+          68.5390625
+        ],
+        "53": [
+          -46.0,
+          167.69140625,
+          238.0,
+          44.0390625
+        ],
+        "54": [
+          -46.0,
+          211.73046875,
+          238.0,
+          44.0390625
+        ],
+        "55": [
+          -46.0,
+          255.76953125,
+          238.0,
+          44.0390625
+        ],
+        "56": [
+          -46.0,
+          398.56640625,
+          238.0,
+          44.0390625
+        ],
+        "57": [
+          -46.0,
+          541.36328125,
+          238.0,
+          44.0390625
+        ],
+        "58": [
+          -46.0,
+          585.40234375,
+          238.0,
+          44.0390625
+        ],
+        "59": [
+          -46.0,
+          629.44140625,
+          238.0,
+          44.0390625
+        ],
+        "60": [
+          44.0,
+          670.09375,
+          88.0,
+          74.1875
+        ],
+        "61": [
+          1168.59375,
+          24.51953125,
+          160.09375,
+          19.0390625
+        ],
+        "62": [
+          702.234375,
+          24.25,
+          142.34375,
+          18.5
+        ],
+        "63": [
+          1196.1640625,
+          93.5,
+          106.9375,
+          33.0
+        ],
+        "64": [
+          1109.6796875,
+          93.5,
+          60.03125,
+          33.0
+        ],
+        "65": [
+          1057.6640625,
+          94.5,
+          50.0,
+          35.0
+        ],
+        "66": [
+          1159.71484375,
+          181.47265625,
+          149.8515625,
+          45.7578125
+        ],
+        "67": [
+          155.37109375,
+          277.87109375,
+          75.4609375,
+          33.0390625
+        ],
+        "68": [
+          249.6953125,
+          277.87109375,
+          105.90625,
+          33.0390625
+        ],
+        "69": [
+          886.40625,
+          277.87109375,
+          85.0,
+          33.0390625
+        ],
+        "70": [
+          1054.8671875,
+          277.87109375,
+          44.0,
+          33.0390625
+        ],
+        "71": [
+          1127.5078125,
+          277.87109375,
+          44.0,
+          33.0390625
+        ],
+        "72": [
+          1227.640625,
+          277.87109375,
+          44.0,
+          33.0390625
+        ],
+        "73": [
+          168.15234375,
+          395.75,
+          79.0234375,
+          28.0
+        ],
+        "74": [
+          189.6640625,
+          395.75,
+          28.0,
+          28.0
+        ],
+        "75": [
+          168.15234375,
+          428.75,
+          79.0234375,
+          28.0
+        ],
+        "76": [
+          189.6640625,
+          428.75,
+          28.0,
+          28.0
+        ],
+        "77": [
+          271.96875,
+          412.25,
+          86.609375,
+          28.0
+        ],
+        "78": [
+          384.1796875,
+          412.25,
+          95.8125,
+          28.0
+        ],
+        "79": [
+          492.59765625,
+          412.25,
+          79.0234375,
+          28.0
+        ],
+        "80": [
+          597.35546875,
+          412.25,
+          88.4921875,
+          28.0
+        ],
+        "81": [
+          750.14453125,
+          412.25,
+          175.0859375,
+          28.0
+        ],
+        "82": [
+          898.19921875,
+          395.75,
+          79.0234375,
+          28.0
+        ],
+        "83": [
+          919.7109375,
+          395.75,
+          28.0,
+          28.0
+        ],
+        "84": [
+          898.19921875,
+          428.75,
+          79.0234375,
+          28.0
+        ],
+        "85": [
+          919.7109375,
+          428.75,
+          28.0,
+          28.0
+        ],
+        "86": [
+          998.22265625,
+          395.75,
+          79.0234375,
+          28.0
+        ],
+        "87": [
+          1019.734375,
+          395.75,
+          28.0,
+          28.0
+        ],
+        "88": [
+          998.22265625,
+          428.75,
+          79.0234375,
+          28.0
+        ],
+        "89": [
+          1019.734375,
+          428.75,
+          28.0,
+          28.0
+        ],
+        "90": [
+          1098.453125,
+          395.75,
+          79.4375,
+          28.0
+        ],
+        "91": [
+          1098.453125,
+          428.75,
+          79.4375,
+          28.0
+        ],
+        "92": [
+          1198.90625,
+          395.75,
+          79.46875,
+          28.0
+        ],
+        "93": [
+          1198.90625,
+          428.75,
+          79.46875,
+          28.0
+        ],
+        "94": [
+          128.6640625,
+          646.0078125,
+          22.046875,
+          25.0
+        ],
+        "95": [
+          971.3671875,
+          666.796875,
+          87.53125,
+          18.5
+        ],
+        "96": [
+          1079.7890625,
+          666.796875,
+          106.609375,
+          18.5
+        ],
+        "97": [
+          1198.859375,
+          666.796875,
+          101.5625,
+          18.5
+        ]
+      }
+    }
+  },
+  "page_url": "http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:7780/admin/paypal/paypal_reports/",
+  "fail_error": ""
+}

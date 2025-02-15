@@ -1,0 +1,45 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 26,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you take me to {description}?",
+  "intent": "Can you take me to the user page of the user who had the most commits across all repos in the video?",
+  "intermediate_intent": "What was the name of the user who had the most commits across all repos in the video?",
+  "video": "repo_attributes",
+  "instantiation_dict": {
+    "description": "the user page of the user who had the most commits across all repos in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "William Cheng"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/wing328",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 3
+}

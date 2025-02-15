@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 28,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "For the {description}, can you {description2}?",
+  "intent": "For the second forum in the video the user reposted to, can you take me to the most commented post all time?",
+  "intermediate_intent": "What was the second forum in the video the user reposted to?",
+  "video": "repost",
+  "instantiation_dict": {
+    "description": "second forum in the video the user reposted to",
+    "description2": "take me to the most commented post all time"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "massachusetts"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/massachusetts/62741/u-s-hospitals-are-required-to-publish-their-prices-forn",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 10
+}

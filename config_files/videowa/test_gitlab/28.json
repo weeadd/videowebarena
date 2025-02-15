@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 28,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you invite {description}?",
+  "intent": "Can you invite all the users as guest role who had at least 90 commits in the first repo in the video to a11y-syntax-highlighting?",
+  "intermediate_intent": "What was the name of the users who had at least 90 commits in the first repo in the video?",
+  "video": "repo_attributes",
+  "instantiation_dict": {
+    "description": "all the users as guest role who had at least 90 commits in the first repo in the video to a11y-syntax-highlighting"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "William Cheng",
+        "Peter Leibiger",
+        "Jim Schubert"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/a11y-syntax-highlighting/-/project_members",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "@kuhnroyal",
+            "@wing328",
+            "@jimschubert"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 8
+}

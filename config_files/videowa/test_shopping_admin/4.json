@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 4,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Can you search {description}?",
+  "intent": "Can you search using the search term at the top of the search query column when the person in the video first goes to the search terms report?",
+  "intermediate_intent": "What search term was at the top of the search query column when the person in the video first goes to the search terms report?",
+  "video": "find_best_selling",
+  "instantiation_dict": {
+    "description": "using the search term at the top of the search query column when the person in the video first goes to the search terms report"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "tanks"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/search/term/report/filter/cXVlcnlfdGV4dD10YW5rcyZzdG9yZV9pZD0w/form_key/wTdxFzzlMSEh59KU/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 1
+}

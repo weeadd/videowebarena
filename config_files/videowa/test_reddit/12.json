@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 12,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "I recall {description}. Can you {description2}?",
+  "intent": "I recall the person in the video stating they are a fan of a certain team. Can you block the author of the first post that comes up when you search the team (without the city) the person in the video is a fan of?",
+  "intermediate_intent": "What was the team (without the city) the person in the video stated they were a fan of?",
+  "video": "poster_info",
+  "instantiation_dict": {
+    "description": "the person in the video stating they are a fan of a certain team",
+    "description2": "block the author of the first post that comes up when you search the team (without the city) the person in the video is a fan of"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "steelers"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/user/MarvelsGrantMan136/block_list",
+        "locator": "func:get_query_text(__page__, '.site-content')",
+        "required_contents": {
+          "must_include": [
+            "BCLetsRide69"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 6
+}

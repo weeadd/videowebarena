@@ -1,0 +1,63 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 10,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you make a project named {description}?",
+  "intent": "Can you make a project named 'videowebarena' and invite the author of the repo in the video that had the most issues?",
+  "intermediate_intent": "What was the name of author of the repo in the video that had the most issues?",
+  "video": "explore_star_tutorial",
+  "instantiation_dict": {
+    "description": "'videowebarena' and invite the author of the repo in the video that had the most issues"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "keycloak"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/videowebarena/-/commits",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Initial commit"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/awesome_web_agents/-/project_members",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "@keycloak"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 4
+}

@@ -1,0 +1,76 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 35,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you downvote {description}?",
+  "intent": "Can you downvote the top 3 posts in the second forum the user in the video posted to?",
+  "intermediate_intent": "What was the name of the second forum the user in the video posted to?",
+  "video": "post_from_shopping",
+  "instantiation_dict": {
+    "description": "the top 3 posts in the second forum the user in the video posted to"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "pittsburgh"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/pittsburgh/45899/driving-in-pittsburgh-summed-up-by-one-traffic-sign",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/pittsburgh/89846/fallingwater-by-lisa-frank-lloyd-wright",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/pittsburgh/45900/happy-light-up-night-pittsburgh",
+        "locator": "document.querySelectorAll('div.submission__vote')[0].querySelector('form').getAttribute('class')",
+        "required_contents": {
+          "must_include": [
+            "vote vote--user-downvoted"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 13
+}

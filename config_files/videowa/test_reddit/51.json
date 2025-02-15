@@ -1,0 +1,67 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 51,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999 |AND| http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770 ",
+  "geolocation": null,
+  "intent_template": "Can you make a post {description}",
+  "intent": "Can you make a post in the gaming forum using the title and image of the first item item the user added to cart in the video?",
+  "intermediate_intent": "What was the name of the first item item the user added to cart in the video?",
+  "video": "reddit_shopping_buy",
+  "instantiation_dict": {
+    "description": "in the gaming forum using the title and image of the first item item the user added to cart in the video?"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "The Lord of The Rings Men's Film Trilogy Logo Sleepwear Lounge Bottoms Pajama Pants"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html",
+      "page_image_query"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "func:get_query_text(__page__, \"#main > article > div > div.submission__inner > header\")",
+        "required_contents": {
+          "must_include": [
+            "SCUF Instinct Pro Steel Gray Custom Wireless Performance Controller for Xbox Series X|S, Xbox One, PC, and Mobile - Steel Gray - Xbox Series X",
+            "MarvelsGrantMan136"
+          ]
+        }
+      }
+    ],
+    "page_image_query": [
+      {
+        "eval_image_url": "last",
+        "eval_image_class": ".submission__image",
+        "eval_fuzzy_image_match": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/media/catalog/product/cache/829a59e57f886f8cf0598ffca4f8a940/B/0/B093CFW2S1.0.jpg"
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 19
+}

@@ -1,0 +1,31 @@
+2025-02-12 17:16:28,416 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_lbgc4m2/4.json
+2025-02-12 17:16:28,429 - INFO - [Intent]: The person in the video mentions they are visiting a certain landmark in the next month. Can you take me to the comments for a post on the website showing the landmark rainbow colored.
+2025-02-12 17:16:49,091 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'ERROR: GPT-4V models do not support mode completion', 'raw_prediction': ''}
+2025-02-12 17:16:49,428 - INFO - [Intermidiate Intent]: What landmark did the person say they are visiting in the next month?
+2025-02-12 17:16:49,428 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Navigate to Forums.
+    action: Go to 'Forums'.
+task: Sort forums alphabetically to view available options.
+    action: Sort forums alphabetically.
+task: Sort posts within a subreddit by various criteria such as hot, new, active, top, controversial, and most commented.
+    action: Sort posts by 'Hot'.
+    action: Click to sort posts by 'New'.
+    action: Click to sort posts by 'Active'.
+    action: Click to sort posts by 'Top'.
+    action: Click to sort posts by 'Controversial'.
+    action: Click to sort posts by 'Most Commented'.
+task: Search for the most commented posts in a specific forum.
+    action: Click to sort posts by 'Most Commented'.
+    action: Search for the most commented posts in the 'Washington DC' forum.
+task: Reply to a post or comment.
+    action: Click to reply to a post.
+task: Make an original comment in a forum.
+    action: Click on the text box to write a new comment.
+    action: Post the comment.
+task: Sort forums and navigate to comments to write your own.
+    action: Go to 'Forums' and sort alphabetically.
+    action: Go to the 'Food' forum.
+2025-02-12 17:16:49,443 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_lbgc4m2/4.json
+2025-02-12 17:16:49,443 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp_lbgc4m2/4.json
+2025-02-12 17:16:50,855 - INFO - Average score: 0.0
+2025-02-12 17:16:50,860 - INFO - Average intermediate score: 0.0

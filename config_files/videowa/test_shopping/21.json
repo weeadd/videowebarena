@@ -1,0 +1,68 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 21,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Buy {description}.",
+  "intent": "Buy 2 of the last item added to cart in the video, but with the other flavor option.",
+  "intermediate_intent": "What was the last item added to the cart in the video and what was the flavor option the person didn't choose?",
+  "video": "add_ingredients_to_cart",
+  "instantiation_dict": {
+    "description": "2 of the last item added to cart in the video, but with the other flavor option"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Heinz Tomato Ketchup with No Sugar Added (6 ct Pack, 13 oz Bottles)",
+        "Organic"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "func:shopping_get_latest_order_url()",
+        "locator": "func:shopping_get_order_product_quantity(__page__,'B00IOE034C')",
+        "required_contents": {
+          "required_values": [
+            "== 2"
+          ]
+        }
+      },
+      {
+        "url": "func:shopping_get_latest_order_url()",
+        "locator": "func:shopping_get_order_product_option(__page__, 'B00IOE034C', 'Flavor Name')",
+        "required_contents": {
+          "must_include": [
+            "Organic"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 12
+}

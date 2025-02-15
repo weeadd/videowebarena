@@ -1,0 +1,64 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 66,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Create a project {description}.",
+  "instantiation_dict": {
+    "description": "that is empty but with the same name as the one made in the video and an MIT license"
+  },
+  "video": "project_wikipediareddit_tutorial",
+  "intent": "Create a project that is empty but with the same name as the one made in the video and an MIT License",
+  "intermediate_intent": "What was the name of the repo made in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "list_of_awesome_things"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/list_of_awesome_things/-/commits",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Initial commit"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/list_of_awesome_things/-/blob/main/LICENSE",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "MIT license",
+            "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 15
+}

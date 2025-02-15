@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 15,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you leave a comment {description}.",
+  "intent": "Can you leave a comment on all the posts in the video with black and white images, saying 'this is so old-school'.",
+  "intermediate_intent": "What are the names of the posts in the video with black and white images?",
+  "video": "poster_info",
+  "instantiation_dict": {
+    "description": "on all the posts in the video with black and white images, saying 'this is so old-school'"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Men gathered around sign reading \"Police.. We need your protection... not your harassment, Garfield Teen Organization,\" on Columbo Avenue, Garfield: April, 1968: photograph by charles \"teenie\" Harris."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/pittsburgh/89805/men-gathered-around-sign-reading-police-we-need-your",
+        "locator": "func:reddit_get_latest_comment_content_by_username(__page__, 'MarvelsGrantMan136')",
+        "required_contents": {
+          "exact_match": "this is so old-school!"
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

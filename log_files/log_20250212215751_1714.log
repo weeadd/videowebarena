@@ -1,0 +1,3 @@
+2025-02-12 21:57:54,461 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpkfw4854p/14.json
+2025-02-12 21:57:54,462 - INFO - [Intent]: Recall the state to the north of the first state mentioned in the video. Show me the distance between its capital and Philadelphia?
+2025-02-12 21:58:25,000 - INFO - [Unhandled Error] TimeoutError('Timeout 30000ms exceeded.\n=========================== logs ===========================\nnavigating to "http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:3000/", waiting until "load"\n============================================================')]

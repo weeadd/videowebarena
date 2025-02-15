@@ -1,0 +1,66 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 57,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Open an issue with the title {title} in {repo}, and assign it to {person}.",
+  "instantiation_dict": {
+    "repo": "the repository visited in the video",
+    "title": "'need some literature'"
+  },
+  "video": "issue_repo_tutorial",
+  "intent": "Open an issue with the title 'need some literature' in the repository visited in the video, and assign it to the first person added to the repo in the video.",
+  "intermediate_intent": "What was the @ of the first person added to the repo in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "@lovexj88"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/gimmiethat.space/-/issues",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector('.detail-page-description').outerText",
+        "required_contents": {
+          "must_include": [
+            "need some literature"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/dashboard/issues?scope=all&state=opened&assignee_username=lovexj88",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "need some literature"
+          ]
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 14
+}

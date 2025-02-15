@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 28,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Buy {description}.",
+  "intent": "Buy the first item the person in the video added to the cart in the video, but with the other option.",
+  "intermediate_intent": "What was the first item the person in the video added to the cart in the video?",
+  "video": "sort_by_price",
+  "instantiation_dict": {
+    "description": "the first item the person in the video added to the cart in the video, but with the other option"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Floor Adjustable Microwave Oven Rack: 3-Layer Kitchen Storage Frame| Household Panel Shelf| Multifunctional Standing Baker's Rack| Spice Organizer"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "func:shopping_get_latest_order_url()",
+        "locator": "func:shopping_get_order_product_option(__page__, 'B09LCDGBDY', 'Style')",
+        "required_contents": {
+          "must_include": [
+            "3-Tiers"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 12
+}

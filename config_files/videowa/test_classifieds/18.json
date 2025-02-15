@@ -1,0 +1,53 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 18,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you tell me {description}?",
+  "intent": "Can you tell me the the email of the seller of the first listing with a green book in the video?",
+  "intermediate_intent": "What was the name of the first listing with a green book in the video?",
+  "video": "sort_by_price_range",
+  "instantiation_dict": {
+    "description": "the the email of the seller of the first listing with a green book in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "GMAT 2017 office guide with CDs, 13th edition and extras"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "chloe_chen114@example.com"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 4
+}

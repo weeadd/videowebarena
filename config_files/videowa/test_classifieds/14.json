@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 14,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you comment {description}?",
+  "intent": "Can you comment 'my favorite pokemon!' on the first item in the video that shows Pikachu in the image?",
+  "intermediate_intent": "What is the name of first item in the video that shows Pikachu in the image?",
+  "video": "comments_seller",
+  "instantiation_dict": {
+    "description": "'my favorite pokemon!' on the first item in the video that shows Pikachu in the image"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Wii super smash brothers brawl like new"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=41318",
+        "locator": "func:get_query_text(__page__, '.comments_list')",
+        "required_contents": {
+          "must_include": [
+            "my favorite pokemon!"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 7
+}

@@ -1,0 +1,27 @@
+2025-02-12 20:12:52,921 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp2ljf9k4o/4.json
+2025-02-12 20:12:52,922 - INFO - [Intent]: The person in the video says 'thank you' at a certain point in the video. Can you take me to the page they were on when they say this?
+2025-02-12 20:13:03,657 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '14', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [14]```<|im_end|>'}
+2025-02-12 20:13:09,162 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '19', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [19]```'}
+2025-02-12 20:13:15,926 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '23', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [23]```.'}
+2025-02-12 20:13:21,320 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '28', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [28]```'}
+2025-02-12 20:13:27,452 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '32', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [32]```.'}
+2025-02-12 20:13:33,740 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '83', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [83]```.'}
+2025-02-12 20:13:39,690 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '24', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [24]```'}
+2025-02-12 20:13:46,650 - INFO - [Action]: {'action_type': <ActionTypes.GOTO_URL: 13>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': 'http://ec2-18-118-136-233.us-east-2.compute.amazonaws.com:8023/umano/AndroidSlidingUpPanel', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```goto [http://gitlab.com/umano/AndroidSlidingUpPanel]```.'}
+2025-02-12 20:13:57,439 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': "The person in the video says 'thank you' at the page they were on when they view the repository 'AndroidSlidingUpPanel'.", 'raw_prediction': "In summary, the next action I will perform is ```stop [The person in the video says 'thank you' at the page they were on when they view the repository 'AndroidSlidingUpPanel'.]```"}
+2025-02-12 20:13:57,884 - INFO - [Intermidiate Intent]: What page was the person in the video on when they said 'thank you'?
+2025-02-12 20:13:57,884 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Explore public repositories by navigating to the explore tab under projects and sort them by the most stars.
+    action: Click the 'Explore' tab under 'Projects'.
+    action: Click on 'Most stars' under 'Explore'.
+task: Star a repository by clicking on the repository and pressing the star button.
+    action: Click the 'Star' button to star the repository.
+task: Follow a user by clicking on their username from a repository and selecting follow.
+    action: Click the username from the repository page.
+    action: Click 'Follow' to follow the user.
+task: Navigate to the to-do list to view all tasks.
+    action: Click on the 'To-do list' to view your to-dos.
+2025-02-12 20:13:57,889 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp2ljf9k4o/4.json
+2025-02-12 20:13:57,890 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmp2ljf9k4o/4.json
+2025-02-12 20:13:58,677 - INFO - Average score: 0.0
+2025-02-12 20:13:58,677 - INFO - Average intermediate score: 0.0

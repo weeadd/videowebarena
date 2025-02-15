@@ -1,0 +1,50 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 34,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Get the item listing url of {description}.",
+  "intent": "Get the item listing url of the posting that was in the same column as the frog item but in one row below.",
+  "intermediate_intent": "What was the category of the posting that was in the same column as the frog item but in one row below?",
+  "video": "add_by_category",
+  "instantiation_dict": {
+    "description": "the posting that was in the same column as the frog item but in one row below"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "toothpaste"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/toothpaste-powder-teeth-whitener-helps-remove-smoking-coffee-soda-wine-stain-freshen-the-breath.html",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 19
+}

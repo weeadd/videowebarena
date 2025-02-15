@@ -1,0 +1,54 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 5,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Can you tell me {description}?",
+  "intent": "Can you tell me how many total orders were made by Grace Nguyen in March 2023?",
+  "intermediate_intent": "What section of reports would show how many total orders were made by Grace Nguyen in March 2023?",
+  "video": "find_best_selling",
+  "instantiation_dict": {
+    "description": "how many total orders were made by Grace Nguyen in March 2023"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Customers |OR| Order Total"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "4 |OR| four |OR| Four"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": true,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 2
+}

@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 39,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Change the {description}.",
+  "intent": "Change the review with title \"OKish\" displayed in the closing section of the video to be Approved.",
+  "intermediate_intent": "What is the ID of review with title \"OKish\" displayed in the closing section of the video?",
+  "video": "marketing_tutorial",
+  "instantiation_dict": {
+    "description": "review with title \"OKish\" displayed in the closing section of the video to be Approved"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "349"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "",
+    "url_note": "EXACT"
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/review/product/edit/id/349",
+        "locator": "document.querySelector('[name=\"status_id\"').value",
+        "required_contents": {
+          "exact_match": "1"
+        }
+      }
+    ]
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 15
+}

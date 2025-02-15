@@ -1,0 +1,52 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 35,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you comment {description}?",
+  "intent": "Can you comment 'can we refactor this' on the merge request that had 9 comments in the video?",
+  "intermediate_intent": "What was the name of the merge request that had 9 comments in the video?",
+  "video": "merge_request",
+  "instantiation_dict": {
+    "description": "'can we refactor this' on the merge request that had 9 comments in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Restructure checklist data"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/a11yproject/a11yproject.com/-/merge_requests/1268",
+        "locator": "document.querySelector('[id=\"notes-list\"').lastElementChild.querySelector('.timeline-discussion-body').outerText",
+        "required_contents": {
+          "exact_match": "can we refactor this"
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 10
+}

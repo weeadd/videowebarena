@@ -1,0 +1,5 @@
+2025-02-10 19:57:39,204 - INFO - File config_files/videowa/test_classifieds/63.json does not exist
+2025-02-10 19:57:39,204 - INFO - File config_files/videowa/test_classifieds/67.json does not exist
+2025-02-10 19:57:52,782 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpva4fnvio/56.json
+2025-02-10 19:57:52,782 - INFO - [Intent]: The person in the video mentions they are getting a new laptop. Can you get the cheapest listing in Computers that is from the same company as the new laptop they say they are getting?
+2025-02-10 20:16:43,995 - INFO - [OpenAI Error] APIConnectionError('Connection error.')

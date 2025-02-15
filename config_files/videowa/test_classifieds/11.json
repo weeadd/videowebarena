@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 11,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you return {description}?",
+  "intent": "Can you return the image links of all the listings the person in the video visited?",
+  "intermediate_intent": "What are the names of all the listings the person in the video visited?",
+  "video": "comments_seller",
+  "instantiation_dict": {
+    "description": "the image links of all the listings the person in the video visited"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "xbox series x / with extras",
+        "matador painting on wooden plate",
+        "Canon EF 100-400mm f/4.5-5.6L IS II USM with extender EF 1.4X III"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/oc-content/uploads/50169/50169.png",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/oc-content/uploads/14761/14761.png",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/oc-content/uploads/10542/10542.png"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": ""
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 5
+}

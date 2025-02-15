@@ -1,0 +1,60 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 47,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you subscribe {description}?",
+  "intent": "Can you subscribe to all the forums visited in the video?",
+  "intermediate_intent": "What are the names of all the forums the person in the video visited?",
+  "video": "subreddit",
+  "instantiation_dict": {
+    "description": "to all the forums visited in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "MachineLearning",
+        "arlingtonva",
+        "personalfinance"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+        "locator": "func:get_query_text(__page__, '.sidebar')",
+        "required_contents": {
+          "must_include": [
+            "MachineLearning",
+            "arlingtonva",
+            "personalfinance"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 11
+}

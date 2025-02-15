@@ -1,0 +1,68 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 72,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Can you add {description} to my cart?",
+  "intent": "Can you add enough of the cheapest uncrustable items that appeared in the video to be the same amount as the person in the video ordered to my cart?",
+  "intermediate_intent": "What was the cheapest uncrustable items that appeared in the video? How many uncrustable items did the person in the video order?",
+  "video": "ordermultiple_orderpage_review",
+  "instantiation_dict": {
+    "description": "enough of the cheapest uncrustable items that appeared in the video to be the same amount as the person in the video ordered"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Smucker's Uncrustables Peanut Butter and Strawberry Jam Sandwiches, 2 Ounces (Pack of 4) (Frozen)",
+        "20"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Smucker's Uncrustables Peanut Butter and Strawberry Jam Sandwiches, 2 Ounces (Pack of 4) (Frozen)"
+          ]
+        }
+      },
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart/",
+        "locator": "lambda:(() => {try {return Array.from(document.querySelectorAll(\".item-info\")).find(el => el.textContent.includes(\"Smucker's Uncrustables Peanut Butter and Strawberry Jam Sandwiches, 2 Ounces (Pack of 4) (Frozen)\")).querySelector(\"input\").getAttribute(\"data-item-qty\")} catch (e) {return \" \"}})()",
+        "required_contents": {
+          "must_include": [
+            "5"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 8
+}

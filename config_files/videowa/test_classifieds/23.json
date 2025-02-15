@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 23,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you comment {description}?",
+  "intent": "Can you comment 'I'm interested' on the last listing the person in the video opened?",
+  "intermediate_intent": "What was the name of the last listing the person in the video opened?",
+  "video": "image_page",
+  "instantiation_dict": {
+    "description": "'I'm interested' on the last listing the person in the video opened"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Rehoming 3.5 yr old pitbull/American bully"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/index.php?page=item&id=73748",
+        "locator": "func:get_query_text(__page__, '.comments_list')",
+        "required_contents": {
+          "must_include": [
+            "I'm interested"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 7
+}

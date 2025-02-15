@@ -1,0 +1,76 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 23,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Create a milestone with the title {title} and dates {dates} in {repo}.",
+  "instantiation_dict": {
+    "repo": "the repository with the most merge requests in the video",
+    "title": "'want to submit to conference'",
+    "dates": "starting on January 1st 2023 to September 1st 2024"
+  },
+  "video": "issue_repo_tutorial",
+  "intent": "Create a milestone with the title 'want to submit to conference' and dates starting on January 1st 2023 to September 1st 2024 in the repository with the most merge requests in the video.",
+  "intermediate_intent": "What was the name of the repository with the most merge requests in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "design"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/primer/design/-/milestones",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector(\"#content-body\").outerText",
+        "required_contents": {
+          "must_include": [
+            "want to submit to conference"
+          ]
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('.block.start_date').outerText",
+        "required_contents": {
+          "must_include": [
+            "Sep 1, 2024"
+          ]
+        }
+      },
+      {
+        "url": "last",
+        "locator": "document.querySelector('.block.due_date').outerText",
+        "required_contents": {
+          "must_include": [
+            "Jan 1, 2023"
+          ]
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 7
+}

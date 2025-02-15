@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "reddit"
+  ],
+  "task_id": 83,
+  "require_login": true,
+  "storage_state": "./.auth/reddit_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999",
+  "geolocation": null,
+  "intent_template": "Can you edit the post {description}?",
+  "intent": "Can you edit the post with the most upvotes in the video to include 'found it!' in the body?",
+  "intermediate_intent": "What was the name of the post with the most upvotes in the video?",
+  "video": "edit_post",
+  "instantiation_dict": {
+    "description": "with the most upvotes in the video to include 'found it!' in the body"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Editing submission 'Yellowjackets' Season 2 Premiere Draws Nearly 2M Viewers, Breaks Showtime Streaming Record"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9999/f/television/134942/yellowjackets-season-2-premiere-draws-nearly-2m-viewers",
+        "locator": "document.querySelector('.submission__body').outerText",
+        "required_contents": {
+          "exact_match": "found it!"
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 24
+}

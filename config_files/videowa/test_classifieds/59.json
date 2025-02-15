@@ -1,0 +1,61 @@
+{
+  "sites": [
+    "classifieds"
+  ],
+  "task_id": 59,
+  "require_login": true,
+  "storage_state": "./.auth/classifieds_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980",
+  "geolocation": null,
+  "intent_template": "Can you repost {description}?",
+  "intent": "Can you repost a listing using the last listing the person in the video visited, but price it a dollar cheaper?",
+  "intermediate_intent": "What was the cost of the last listing the person in the video visited?",
+  "video": "post_tutorial",
+  "instantiation_dict": {
+    "description": "a listing using the last listing the person in the video visited, but price it a dollar cheaper"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "100 |OR| 100.00"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html",
+      "page_image_query"
+    ],
+    "reference_answers": null,
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "func:get_query_text(__page__, '.price')",
+        "required_contents": {
+          "must_include": [
+            "99.00"
+          ]
+        }
+      }
+    ],
+    "page_image_query": [
+      {
+        "eval_image_url": "last",
+        "eval_image_class": ".item-photos",
+        "eval_fuzzy_image_match": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:9980/oc-content/uploads/51125/51125.png"
+      }
+    ]
+  },
+  "intermediate_difficulty": "easy",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 13
+}

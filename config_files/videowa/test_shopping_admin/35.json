@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 35,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Change the {description}.",
+  "intent": "Change the page title of the last page from the top in my page table in the video to be \"Customer Servicing\".",
+  "intermediate_intent": "What is the id of the last page from the top in my page table in the video?",
+  "video": "content_tutorial",
+  "instantiation_dict": {
+    "description": "page title of the last page from the top in my page table in the video to be \"Customer Servicing\""
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "6"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/cms/page/edit/page_id/6/",
+        "locator": "document.querySelector('input[name=\"title\"').value",
+        "required_contents": {
+          "exact_match": "Customer Servicing"
+        }
+      }
+    ],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 15
+}

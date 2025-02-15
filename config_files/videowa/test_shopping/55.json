@@ -1,0 +1,59 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 55,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/tmp-pop-tarts-breakfast-toaster-pastries-frosted-banana-creme-pie-bakery-inspired-snack-food-16-count-2-pack.html",
+  "geolocation": null,
+  "intent_template": "Leave a review on {description}.",
+  "intent": "Leave a review on this item, stating 'I need breakfast because it is (time)' where (time) is the time the person in the video mentioned it was at the moment of recording..",
+  "intermediate_intent": "What time was it for the person recording the video?",
+  "video": "images_and_description",
+  "instantiation_dict": {
+    "description": "this item, stating 'I need breakfast because it is (time)' where (time) is the time the person in the video mentioned it was at the moment of recording."
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "9 AM |OR| 9:00 |OR| 9 |OR| 9:00 AM"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+        "locator": "func:shopping_get_sku_latest_review_text(\"B097XSNCX4\")",
+        "required_contents": {
+          "must_include": [
+            "I need breakfast because it is",
+            "9"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "easy",
+  "visual_reasoning": false,
+  "audio_reasoning": true,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 4
+}

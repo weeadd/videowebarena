@@ -1,0 +1,52 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 41,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Can you change my profile website {description}?",
+  "intent": "Can you change my profile website to the second website profile in the video?",
+  "intermediate_intent": "What was the address of the second website profile in the video?",
+  "video": "edit_personal",
+  "instantiation_dict": {
+    "description": "to the second website profile in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "https://www.cmu.edu/"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze",
+        "locator": "document.querySelector('.profile-header [itemprop=\"url\"]').outerText",
+        "required_contents": {
+          "exact_match": "https://www.cmu.edu/"
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 12
+}

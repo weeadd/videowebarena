@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 8,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Can you traverse {description}?",
+  "intent": "Can you traverse to the review details of the second review from the top for all reviews made before or on April 20, 2023?",
+  "intermediate_intent": "What was the nickname of the customer for the second review from the top for all reviews made before or on April 20, 2023?",
+  "video": "see_reviews_tutorial",
+  "instantiation_dict": {
+    "description": "traverse to the review details of the second review from the top for all reviews made before or on April 20, 2023"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Emerald"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/review/product/edit/id/334/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "easy",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 3
+}

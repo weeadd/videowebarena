@@ -1,0 +1,57 @@
+{
+  "sites": [
+    "gitlab"
+  ],
+  "task_id": 21,
+  "require_login": true,
+  "storage_state": "./.auth/gitlab_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023",
+  "geolocation": null,
+  "intent_template": "Open an issue with the title {title} in {repo}.",
+  "instantiation_dict": {
+    "repo": "the last repository visited in the video",
+    "title": "'had issues with cloning'"
+  },
+  "video": "issue_repo_tutorial",
+  "intent": "Open an issue with the title 'had issues with cloning' in the last repository visited in the video.",
+  "intermediate_intent": "What was the name of the last repository visited in the video?",
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "empathy-prompts"
+      ]
+    }
+  },
+  "eval": {
+    "eval_types": [
+      "url_match",
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:8023/byteblaze/empathy-prompts/-/issues",
+    "program_html": [
+      {
+        "url": "last",
+        "locator": "document.querySelector('.detail-page-description').outerText",
+        "required_contents": {
+          "must_include": [
+            "had issues with cloning"
+          ]
+        }
+      }
+    ],
+    "url_note": "GOLD in PRED"
+  },
+  "intermediate_difficulty": "medium",
+  "overall_difficulty": "hard",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 6
+}

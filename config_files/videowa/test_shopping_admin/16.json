@@ -1,0 +1,49 @@
+{
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_id": 16,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_admin_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin",
+  "geolocation": null,
+  "intent_template": "Take me to {description}.",
+  "intent": "Take me to the page where I can change the shipping address of the fourth most recent order details of the order with the same status as the last status the person in the video filtered with.",
+  "intermediate_intent": "What is the order id of the fourth most recent order details of the order with the same status as the last status the person in the video filtered with.",
+  "video": "sales_tutorial",
+  "instantiation_dict": {
+    "description": "the page where I can change the shipping address of the fourth most recent order details of the order with the same status as the last status the person in the video filtered with"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "307"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "url_match"
+    ],
+    "reference_answers": null,
+    "reference_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7780/admin/admin/sales/order/address/address_id/613/",
+    "program_html": [],
+    "url_note": "EXACT"
+  },
+  "overall_difficulty": "hard",
+  "intermediate_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": true,
+  "comments": "",
+  "intent_template_id": 5
+}

@@ -1,0 +1,56 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 50,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Return the {description}.",
+  "intent": "Return the links of all the items the user on the video either wrote a review for or added to cart.",
+  "intermediate_intent": "What were the names of all the items the user on the video either wrote a review for or added to cart?",
+  "video": "review_tutorial",
+  "instantiation_dict": {
+    "description": "links of all the items the user on the video either wrote a review for or added to cart"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Jabra Evolve 40 UC Stereo Wired Headset/Music Headphones (U.S. Retail Packaging) Bundle with Jabra Evolve 40 Stereo UC - Professional Unified Communicaton Headset",
+        "Sony WH-1000XM4 Wireless Noise Canceling Over-Ear Headphones (Black) with Sony WLA-NS7 Wireless TV Adapter Bundle (2 Items)"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/sony-wh-1000xm4-wireless-noise-canceling-over-ear-headphones-black-with-sony-wla-ns7-wireless-tv-adapter-bundle-2-items.html",
+        "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770//jabra-evolve-40-uc-stereo-wired-headset-music-headphones-u-s-retail-packaging-bundle-with-jabra-evolve-40-stereo-uc-professional-unified-communicaton-headset.html"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "overall_difficulty": "medium",
+  "intermediate_difficulty": "hard",
+  "visual_reasoning": false,
+  "audio_reasoning": false,
+  "multihop_reasoning": true,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 23
+}

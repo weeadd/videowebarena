@@ -1,0 +1,24 @@
+2025-02-12 18:39:54,780 - INFO - [Config file]: /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpxbe39w6h/18.json
+2025-02-12 18:39:54,780 - INFO - [Intent]: Can you tell me the the email of the seller of the first listing with a green book in the video?
+2025-02-12 18:40:07,773 - INFO - [Action]: {'action_type': <ActionTypes.CLICK: 6>, 'coords': array([0., 0.], dtype=float32), 'element_role': 31, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '13', 'key_comb': '', 'direction': '', 'answer': '', 'raw_prediction': 'In summary, the next action I will perform is ```click [13]```'}
+2025-02-12 18:40:14,314 - INFO - [Action]: {'action_type': <ActionTypes.STOP: 17>, 'coords': array([0., 0.], dtype=float32), 'element_role': 0, 'element_name': '', 'text': [], 'page_number': 0, 'url': '', 'nth': 0, 'pw_code': '', 'element_id': '', 'key_comb': '', 'direction': '', 'answer': 'miguel_ito@example.com', 'raw_prediction': 'In summary, the next action I will perform is ```stop [miguel_ito@example.com]```.'}
+2025-02-12 18:40:14,591 - INFO - [Intermidiate Intent]: What was the name of the first listing with a green book in the video?
+2025-02-12 18:40:14,591 - INFO - [Detected Intermidiate Intent]: The next part is the video summary, which is a sequence of tasks and actions used to describe the steps in the video in chronological order. :
+task: Scroll down to view different categories.
+    action: Scroll down to view all categories.
+task: Select a category to view listings.
+    action: Click on a category button to view listings under that category.
+task: Select a location if needed before choosing a category.
+    action: Click on the category after selecting the location.
+    action: Click on 'Maryland' to filter posts by location.
+task: Sort listings by price using the sort options.
+    action: Hover over the 'store by' button and click 'lower price first' to sort by price.
+task: Set minimum and maximum price filters.
+    action: Go to the min and max text boxes to set a price range.
+    action: Enter the minimum price in the min text box.
+task: Remove price range filters if needed.
+    action: Delete the price range and press 'Apply' to remove the filter.
+2025-02-12 18:40:14,592 - INFO - [Intermediate Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpxbe39w6h/18.json
+2025-02-12 18:40:14,592 - INFO - [Result] (FAIL) /var/folders/c7/x8yqw4px0cq4brdvc3tpjsl00000gp/T/tmpxbe39w6h/18.json
+2025-02-12 18:40:14,785 - INFO - Average score: 0.0
+2025-02-12 18:40:14,785 - INFO - Average intermediate score: 0.0

@@ -1,0 +1,58 @@
+{
+  "sites": [
+    "shopping"
+  ],
+  "task_id": 6,
+  "require_login": true,
+  "storage_state": "./.auth/shopping_state.json",
+  "start_url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770",
+  "geolocation": null,
+  "intent_template": "Add the {description} to my cart.",
+  "intent": "Add the cheapest item that was in the same category as the red item in the cart in the video to my cart.",
+  "intermediate_intent": "What was the red item in the cart in the video?",
+  "video": "add_to_cart",
+  "instantiation_dict": {
+    "description": "cheapest item that was in the same category as the red item in the cart in the video"
+  },
+  "require_reset": false,
+  "intermediate_eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "must_include": [
+        "Armor3 'Soundtac' Universal Gaming Headset (Black) for Xbox Series X/ Xbox Series S/ Nintendo Switch/ Lite/ PS4/ PS5/ Xbox One/ Wii U/ PC/ Mac - Nintendo Switch"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": ""
+  },
+  "eval": {
+    "eval_types": [
+      "program_html"
+    ],
+    "reference_answers": null,
+    "reference_url": "",
+    "program_html": [
+      {
+        "url": "http://ec2-3-139-58-193.us-east-2.compute.amazonaws.com:7770/checkout/cart",
+        "locator": "",
+        "required_contents": {
+          "must_include": [
+            "Silicone Thumb Stick Joystick Cap Analog Grip Thumbsticks Cap Cover Case for PS4 PS3 Xbox One Xbox 360 Game Controllers (Black-Red)"
+          ]
+        }
+      }
+    ]
+  },
+  "intermediate_difficulty": "hard",
+  "overall_difficulty": "medium",
+  "visual_reasoning": true,
+  "audio_reasoning": false,
+  "multihop_reasoning": false,
+  "temporal_reasoning": false,
+  "comments": "",
+  "intent_template_id": 0
+}
