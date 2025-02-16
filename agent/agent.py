@@ -496,7 +496,6 @@ class VideoSummaryPromptAgent(PromptAgent):
             try:
                 parsed_response = self.prompt_constructor.extract_action(response)
                 print("parsed_response:", parsed_response)
-                print(type(parsed_response))
                 if self.action_set_tag == "id_accessibility_tree":
                     action = create_id_based_action(parsed_response)
                 elif self.action_set_tag == "playwright":

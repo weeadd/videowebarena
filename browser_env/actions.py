@@ -376,6 +376,8 @@ def is_equivalent(a: Action, b: Action) -> bool:
             return a["pw_code"] == b["pw_code"]
         case ActionTypes.STOP:
             return a["answer"] == b["answer"]
+        case ActionTypes.INPUT:
+            return str(a["coords"]) == str(b["coords"]) and a["text"] == b["text"]
         case _:
             raise ValueError(f"Unknown action type: {a['action_type']}")
 
