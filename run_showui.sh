@@ -1,0 +1,16 @@
+python run_showui.py \
+  --instruction_path agent/prompts/jsons/p_som_cot_id_actree_3s_video_summary.json \
+  --video_summary_instruction_path agent/prompts/jsons/video_frame_understanding.json \
+  --test_start_idx 0 \
+  --test_end_idx 200 \
+  --test_config_base_dir config_files/videowa \
+  --provider vllm \
+  --model "showlab/ShowUI-2B" \
+  --action_set_tag showui \
+  --observation_type image \
+  --result_dir "results_2-15_v3_with_subtitles" \
+  --agent_type showui \
+  --video_dir media \
+  --max_frame_num 5 \
+  --max_tokens 8192 \
+  --intermediate_intent_instruction_path agent/prompts/jsons/video_frame_intent_understanding.json

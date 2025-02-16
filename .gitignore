@@ -10,3 +10,7 @@ __pycache__/
 *.py[cod]
 venv/
 .env/
+log_files/
+webarena.egg-info/PKG-INFO
+webarena.egg-info/
+add_videos_to_media.zip

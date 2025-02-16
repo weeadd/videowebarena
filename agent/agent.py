@@ -2,7 +2,7 @@ import argparse
 import json
 from typing import Any, Optional, Union
 import os
-
+from agent.utils_showui import ShowUIPromptConstructor
 import tiktoken
 from beartype import beartype
 from PIL import Image
@@ -105,7 +105,7 @@ class PromptAgent(Agent):
         self,
         action_set_tag: str,
         lm_config: lm_config.LMConfig,
-        prompt_constructor: PromptConstructor,
+        prompt_constructor: PromptConstructor | ShowUIPromptConstructor,
         captioning_fn=None,
     ) -> None:
         super().__init__()
@@ -265,7 +265,7 @@ class VideoUnderstanding:
         video_name = os.path.splitext(os.path.basename(video_path))[0]
         
         # 构造 ASR JSON 文件路径
-        asr_json_file_path = f"/Users/kevin/Documents/vwa/videowebarena/vwa_jsons/{video_name}/{video_name}.asr.json"
+        asr_json_file_path = f"./vwa_jsons/{video_name}/{video_name}.asr.json"
         
         # 读取 ASR JSON 文件
         try:
@@ -288,7 +288,7 @@ class VideoUnderstanding:
             response = f"Error: The ASR JSON file for {video_name} is not properly formatted."
 
         # 输出结果
-        print(f"Video Path: {video_path}\n{summary}", flush=True)
+        # print(f"Video Path: {video_path}\n{summary}", flush=True)
         return response
 
     
@@ -404,7 +404,7 @@ class VideoSummaryPromptAgent(PromptAgent):
         self,
         action_set_tag: str,
         lm_config: lm_config.LMConfig,
-        prompt_constructor: VideoSummaryPromptConstructor,
+        prompt_constructor: VideoSummaryPromptConstructor | ShowUIPromptConstructor,
         video_dir: str,
         video_prompt_constructor: Union[VideoFrameUnderstandingPromptConstructor, VideoUnderstandingPromptConstructor],
     ):
@@ -470,28 +470,42 @@ class VideoSummaryPromptAgent(PromptAgent):
             meta_data,
         )
         # print("========================PROMPT=================================")
-        # print(prompt)
+        # print("traj:", trajectory)
+        # print("intent:", intent)
+        # print("meta_data:", meta_data)
+        # import json
+        # with open("/opt/data/private/projects/videowebarena/prompt.txt", "w") as f:
+        #     json.dump(prompt, f)
         # print("========================END=================================")
         lm_config = self.lm_config
         n = 0
         while True:
             response = call_llm(lm_config, prompt)
-            force_prefix = self.prompt_constructor.instruction["meta_data"].get(
-                "force_prefix", ""
-            )
-            response = f"{force_prefix}{response}"
+            try:
+                force_prefix = self.prompt_constructor.instruction["meta_data"].get(
+                    "force_prefix", ""
+                )
+                response = f"{force_prefix}{response}"
+            except:
+                pass
+            
             # raise ValueError(response)
             if output_response:
                 print(f"Agent: {response}", flush=True)
             n += 1
             try:
                 parsed_response = self.prompt_constructor.extract_action(response)
+                print("parsed_response:", parsed_response)
+                print(type(parsed_response))
                 if self.action_set_tag == "id_accessibility_tree":
                     action = create_id_based_action(parsed_response)
                 elif self.action_set_tag == "playwright":
                     action = create_playwright_action(parsed_response)
                 elif self.action_set_tag == "som":
                     action = create_id_based_action(parsed_response)
+                # add showui action parser outside to save raw action to the action history
+                elif self.action_set_tag == "showui":   
+                    action = parsed_response
                 else:
                     raise ValueError(f"Unknown action type {self.action_set_tag}")
                 action["raw_prediction"] = response
@@ -576,6 +590,25 @@ def construct_agent(args: argparse.Namespace, captioning_fn=None) -> Agent:
             )
         else:
             raise ValueError(f"Unsupported video summary prompt constructor type {video_constructor_type}")
+        agent = VideoSummaryPromptAgent(
+            action_set_tag=args.action_set_tag,
+            lm_config=llm_config,
+            prompt_constructor=prompt_constructor,
+            video_dir=args.video_dir,
+            video_prompt_constructor=video_prompt_constructor,
+        )
+    elif args.agent_type == "showui":
+    
+        prompt_constructor = ShowUIPromptConstructor()
+        tokenizer = Tokenizer(args.provider, args.model)
+        # TODO: remove video_prompt_constructor since it is not used
+        video_prompt_constructor = VideoFrameUnderstandingPromptConstructor(
+            instruction_path=args.video_summary_instruction_path,
+            lm_config=llm_config,
+            tokenizer=tokenizer,
+            max_frame_num=args.max_frame_num,
+        )
+        
         agent = VideoSummaryPromptAgent(
             action_set_tag=args.action_set_tag,
             lm_config=llm_config,
