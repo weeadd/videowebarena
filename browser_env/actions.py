@@ -324,6 +324,7 @@ class ActionTypes(IntEnum):
 
     STOP = 17
     CLEAR = 18
+    INPUT = 19
 
     def __str__(self) -> str:
         return f"ACTION_TYPES.{self.name}"
@@ -375,6 +376,8 @@ def is_equivalent(a: Action, b: Action) -> bool:
             return a["pw_code"] == b["pw_code"]
         case ActionTypes.STOP:
             return a["answer"] == b["answer"]
+        case ActionTypes.INPUT:
+            return str(a["coords"]) == str(b["coords"]) and a["text"] == b["text"]
         case _:
             raise ValueError(f"Unknown action type: {a['action_type']}")
 
@@ -1334,7 +1337,13 @@ def execute_action(
                 raise NotImplementedError(
                     "No proper locator found for select option action"
                 )
-
+                
+        # ADD SHOWUI ACTIONS HERE
+        case ActionTypes.INPUT:
+            execute_mouse_click(action["coords"][0], action["coords"][1], page)
+            # directly type the text instead of changing to id
+            page.keyboard.type(text)
+            
         case _:
             raise ValueError(f"Unknown action type: {action_type}")
 

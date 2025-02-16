@@ -66,6 +66,9 @@ def get_render_action(
             action_str = f"<div class='raw_parsed_prediction' style='background-color:grey'><pre>{action['raw_prediction']}</pre></div>"
             action_str += f"<div class='action_object' style='background-color:grey'><pre>{repr(action)}</pre></div>"
             action_str += f"<div class='parsed_action' style='background-color:yellow'><pre>{action2str(action, action_set_tag, node_content)}</pre></div>"
+        
+        case "showui":
+            action_str = f"<div class='raw_parsed_prediction' style='background-color:grey'><pre>{action}</pre></div>"
 
         case "playwright":
             action_str = action["pw_code"]

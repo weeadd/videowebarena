@@ -10,7 +10,7 @@ import openai
 from openai import OpenAI
 
 vllm_api_key = "EMPTY"
-vllm_api_base = "http://10.245.95.242:8001/v1"
+vllm_api_base = "http://0.0.0.0:8000/v1"
 client = OpenAI(
     api_key=vllm_api_key,
     base_url=vllm_api_base,
